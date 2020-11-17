@@ -1,0 +1,164 @@
+.NavBar__container {
+  width: 100%;
+  height: 56px;
+  background-color: #08bbd5;
+  position: relative;
+  z-index: 100;
+  a {
+    text-decoration: none;
+    cursor: pointer;
+    position: relative;
+    display: block;
+    background: #08bbd5;
+    text-align: center;
+    color: #fff;
+    font-size: 18px;
+    line-height: 56px;
+  }
+  > nav > ul > a > li {
+    display: list-item;
+    margin: 2vw;
+  }
+  .NavList__contents {
+    &:hover {
+      background-color: #00a5d5;
+      background-repeat: no-repeat;
+    }
+    @for $num from 1 through 6 {
+      .NavList__content-item-#{$num} {
+        transform-origin: top center;
+        animation: scaleZ 300ms ($num * 60ms) ease-in-out forwards;
+      }
+    }
+  }
+  li {
+    list-style-type: none; /* Remove bullets */
+    padding: 0; /* Remove padding */
+    margin: 0; /* Remove margins */
+  }
+}
+
+@keyframes scaleZ {
+  0% {
+    opacity: 0;
+    transform: scale(0);
+  }
+
+  80% {
+    transform: scale(1.07);
+  }
+
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/*
+.dropdown_menu-4
+  for num in (1..6)
+     .dropdown_item-{num}  
+       transform-origin: top center
+       animation: scaleZ 300ms (num * 60ms) ease-in-out forwards
+
+
+
+.dropdown_menu-4
+  for num in (1..6)
+     .dropdown_item-{num}  
+       transform-origin: top center
+       animation: scaleZ 300ms (num * 60ms) ease-in-out forwards
+
+
+@keyframes scaleZ {
+  0% {
+    opacity: 0;
+    transform: scale(0);
+  }
+  
+  80% {
+    transform: scale(1.07);
+  }
+
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+
+*/
+
+@import url('https://fonts.googleapis.com/css?family=Sen&display=swap');
+
+body
+  background: #374E59
+  color: #C06162
+  font-family: 'Sen'
+  margin-bottom: 200px
+  
+h1
+  font-size: 48px
+  text-align: center
+  margin-top: 30px
+  margin-bottom: 40px
+  
+.menu-container
+    margin-top: 20px
+    h3
+      font-size: 24px
+      margin-bottom: 10px
+      text-align: center
+.menu-container:nth-child(3)
+    margin-top: 200px
+
+nav 
+  width: 100%
+  display: flex
+  justify-content: center
+
+
+.menu
+  display: flex
+  justify-content: center
+
+ .dropdown
+   padding: 20px 40px
+   display: flex
+   justify-content: center
+   align-items: center
+   color: white
+   background: #C06162
+   background: #34495e
+   position: relative
+   font-size: 18px
+   perspective: 1000px
+   z-index: 100
+   &:hover
+     background: #2980b9 
+     cursor: pointer
+     
+   &:hover .dropdown_menu li
+     display: block
+   
+
+ .dropdown_menu
+   position: absolute
+   top: 100%
+   left: 0
+   width: 100%
+   perspective: 1000px
+   z-index: -1
+   li
+    display: none
+    color: white
+    background-color: #34495e
+    padding: 10px 20px
+    font-size: 16px
+    opacity: 0
+    &:hover
+      background-color: #2980b9 
+
+
+
+
