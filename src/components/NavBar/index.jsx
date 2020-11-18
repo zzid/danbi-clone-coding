@@ -20,49 +20,52 @@ const data = [
     ],
   },
 ];
-class NavList extends React.Component {
+const NavList = (props) => {
+  return (
+    <li className="NavList__list">
+      <Link to={`/?page=${props.oneData.title}`}>{props.oneData.title}</Link>
+      <ul className="NavList__contents">
+        {props.oneData.contents.map((d, i) => (
+          <li className={`NavList__content-item-${i + 1}`}>{d.title}</li>
+        ))}
+      </ul>
+    </li>
+  );
+};
+
+class NavBar extends React.Component {
   state = {
-    mouseOver: false,
+    scrollTop: 0,
+    fixed: false,
   };
-  onMouseOver = () => {
-    this.setState({ mouseOver: true });
+  componentDidMount() {
+    this.listenToScrollEvent();
+  }
+
+  componentDidUpdate(prevProps, prevState, snapshot) {}
+
+  listenToScrollEvent = () => {
+    document.addEventListener("scroll", () => {
+      requestAnimationFrame(() => {
+        if (window.pageYOffset > 120) {
+          this.setState({ fixed: true });
+        } else if (window.pageYOffset < 50) {
+          this.setState({ fixed: false });
+        }
+      });
+    });
   };
-  onMouseOut = () => {
-    this.setState({ mouseOver: false });
-  };
+
   render() {
-    const { mouseOver } = this.state;
+    const { fixed } = this.state;
     return (
-      <li
-        className="NavList__container"
-        //   onMouseOver={this.onMouseOver}
-        //   onMouseOut={this.onMouseOut}
-      >
-        <Link to={`${this.props.oneData.title}`} />
-        {this.props.oneData.title}
-        {/* {mouseOver && ( */}
-        <ul className="NavList__contents">
-          {this.props.oneData.contents.map((d, i) => (
-            <li className={`NavList__content-item-${i + 1}`}>{d.title}</li>
+      <nav className={fixed ? "NavBar__container fixed" : "NavBar__container"}>
+        <ul className="NavList__container">
+          {data.map((d, i) => (
+            <NavList oneData={d} />
           ))}
         </ul>
-        {/* )} */}
-      </li>
-    );
-  }
-}
-class NavBar extends React.Component {
-  render() {
-    return (
-      <div className="NavBar__container">
-        <nav>
-          <ul className="NavBar__first">
-            {data.map((d, i) => (
-              <NavList oneData={d} />
-            ))}
-          </ul>
-        </nav>
-      </div>
+      </nav>
     );
   }
 }

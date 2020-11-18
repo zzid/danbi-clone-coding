@@ -1,46 +1,82 @@
+@import "src/sass/colors.scss";
 .NavBar__container {
-  width: 100%;
+  margin: 0 auto;
+  left: 0;
+  z-index: 9999;
+  background-color: $sky-blue;
   height: 56px;
-  background-color: #08bbd5;
-  position: relative;
-  z-index: 100;
+  width: 100%;
+  li {
+    display: list-item;
+  }
+}
+.fixed {
+  position: fixed;
+  top: 0;
 
   .NavList__container {
-    align-items: center;
-    a {
-      color: white;
-      display: relative;
-      text-decoration: none;
-      height: 50px;
-    }
-    &:hover .NavList__contents {
-      max-height: 1000px;
-      transition: max-height 1.6s ease-in;
-    }
-
-    .NavList__contents {
-      max-height: 0;
-      transition: max-height 1.6s ease-out;
-      overflow: hidden;
-
-      li {
-        width: 200px;
-        height: 50px;
-        background: white;
-        border: 0.5px solid;
-        color: black;
+    .NavList__list {
+      a {
+        top: 0;
       }
     }
   }
 }
-.NavBar__first {
-  display: flex;
-  justify-content: center;
+.NavList__container {
+  width: 960px;
   list-style: none;
-
   li {
-    list-style-type: none; /* Remove bullets */
-    padding: 0; /* Remove padding */
-    margin: 0; /* Remove margins */
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+  }
+  .NavList__list {
+    align-items: center;
+    float: left;
+    a {
+      display: block;
+      font-size: 18px;
+      color: white;
+      text-align: center;
+      text-decoration: none;
+      line-height: 56px;
+      &:hover {
+        background-color: $blue;
+      }
+    }
+    &:hover .NavList__contents {
+      /* animation */
+      max-height: 1000px;
+      transition: max-height 0.8s ease-in;
+      overflow: hidden;
+      /* animation end */
+    }
+
+    .NavList__contents {
+      /* animation */
+      max-height: 0;
+      transition: max-height 0.8s ease-out;
+      overflow: hidden;
+      /* animation end */
+
+      li {
+        width: 200px;
+        text-align: left;
+        background: transparent !important;
+        color: $grey;
+        font-size: 14px;
+        font-weight: normal;
+        line-height: 1.4;
+        border-left: 0.5px solid $sky-blue;
+        border-right: 0.5px solid $sky-blue;
+        padding: 10px;
+        &:first-child {
+          border-top: 0.5px solid $sky-blue;
+        }
+        &:last-child {
+          border-bottom: 0.5px solid $sky-blue;
+        }
+      }
+    }
   }
 }

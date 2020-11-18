@@ -1,11 +1,21 @@
-@import url('https://cdn.jsdelivr.net/gh/moonspam/NanumBarunGothic@latest/nanumbarungothicsubset.css');
+@import url("https://cdn.jsdelivr.net/gh/moonspam/NanumBarunGothic@latest/nanumbarungothicsubset.css");
 
 html,
 body {
   width: 100%;
-  font-family: 'NanumBarunGothic', sans-serif;
+  font-family: "NanumBarunGothic", sans-serif;
   color: #666;
   word-break: keep-all;
+  vertical-align: baseline;
+}
+ul,
+ol {
+  list-style: none;
+}
+a {
+  text-decoration: none;
 }
 .App_container {
+  display: flex;
+  flex-direction: column;
 }
