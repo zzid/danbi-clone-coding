@@ -26,7 +26,7 @@ const MainPage = () => {
   return (
     <div>
       {data.map((e) => (
-        <div style={{ height: "100px" }}>
+        <div style={{ height: "100px", display: "flex", position: "absolute" }}>
           {e}
           {e}
           {e}

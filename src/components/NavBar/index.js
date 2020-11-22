@@ -35,7 +35,6 @@ const NavList = (props) => {
 
 class NavBar extends React.Component {
   state = {
-    scrollTop: 0,
     fixed: false,
   };
   componentDidMount() {
@@ -60,7 +59,7 @@ class NavBar extends React.Component {
     const { fixed } = this.state;
     return (
       <nav className={fixed ? "NavBar__container fixed" : "NavBar__container"}>
-        <ul className="NavList__container">
+        <ul className="NavBar__ul">
           {data.map((d, i) => (
             <NavList oneData={d} />
           ))}

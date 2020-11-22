@@ -6,32 +6,12 @@
   background-color: $sky-blue;
   height: 56px;
   width: 100%;
-  li {
-    display: list-item;
-  }
 }
-.fixed {
-  position: fixed;
-  top: 0;
 
-  .NavList__container {
-    .NavList__list {
-      a {
-        top: 0;
-      }
-    }
-  }
-}
-.NavList__container {
+.NavBar__ul {
   width: 960px;
   list-style: none;
-  li {
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
-  }
   .NavList__list {
-    align-items: center;
     float: left;
     a {
       display: block;
@@ -40,6 +20,8 @@
       text-align: center;
       text-decoration: none;
       line-height: 56px;
+      width: 100%;
+
       &:hover {
         background-color: $blue;
       }
@@ -47,7 +29,7 @@
     &:hover .NavList__contents {
       /* animation */
       max-height: 1000px;
-      transition: max-height 0.8s ease-in;
+      transition: max-height 0.5s ease-in;
       overflow: hidden;
       /* animation end */
     }
@@ -55,12 +37,14 @@
     .NavList__contents {
       /* animation */
       max-height: 0;
-      transition: max-height 0.8s ease-out;
+      transition: max-height 0.5s ease-out;
       overflow: hidden;
       /* animation end */
 
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
       li {
-        width: 200px;
         text-align: left;
         background: transparent !important;
         color: $grey;
@@ -69,13 +53,26 @@
         line-height: 1.4;
         border-left: 0.5px solid $sky-blue;
         border-right: 0.5px solid $sky-blue;
-        padding: 10px;
+        padding: 10px 30px;
         &:first-child {
           border-top: 0.5px solid $sky-blue;
         }
         &:last-child {
           border-bottom: 0.5px solid $sky-blue;
         }
+      }
+    }
+  }
+}
+.fixed {
+  position: fixed;
+  top: 0;
+
+  .NavBar__ul {
+    .NavList__list {
+      a {
+        top: 0;
+        margin-top: -16px;
       }
     }
   }
