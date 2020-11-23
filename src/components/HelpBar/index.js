@@ -1,5 +1,8 @@
 import React from "react";
-import listenToScrollEvent from "utils/listenToScrollEvent";
+import {
+  listenToScrollEvent,
+  removeScrollEvent,
+} from "utils/listenToScrollEvent";
 import winkBot from "data/ico_free_study.png";
 import "./HelpBar.scss";
 
@@ -11,9 +14,11 @@ class HelpBar extends React.Component {
     this.setState({ fixed: flag });
   };
   componentDidMount() {
-    listenToScrollEvent(this.onSetFixed);
+    this.scrollRequest = listenToScrollEvent(this.onSetFixed);
   }
-
+  componentWillUnmount() {
+    removeScrollEvent(this.scrollRequest);
+  }
   render() {
     const { fixed } = this.state;
     return (

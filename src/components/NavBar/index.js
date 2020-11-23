@@ -1,6 +1,9 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import listenToScrollEvent from "utils/listenToScrollEvent";
+import {
+  listenToScrollEvent,
+  removeScrollEvent,
+} from "utils/listenToScrollEvent";
 import "./NavBar.scss";
 import NavBarData from "data/data.json";
 const data = NavBarData.NavBarData;
@@ -26,11 +29,15 @@ class NavBar extends React.Component {
     this.setState({ fixed: flag });
   };
   componentDidMount() {
-    listenToScrollEvent(this.onSetFixed);
+    this.scrollRequest = listenToScrollEvent(this.onSetFixed);
     // this.listenToScrollEvent();
   }
 
   componentDidUpdate(prevProps, prevState, snapshot) {}
+
+  componentWillUnmount() {
+    removeScrollEvent(this.scrollRequest);
+  }
 
   handleShowAllClick = () => {
     this.setState((prevState) => ({
