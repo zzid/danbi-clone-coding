@@ -1,29 +1,13 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import listenToScrollEvent from "utils/listenToScrollEvent";
 import "./NavBar.scss";
-const data = [
-  {
-    title: "윙크소개",
-    contents: [
-      { title: "윙크 한눈에 보기" },
-      { title: "과목별 학습" },
-      { title: "학부모님 사용 후기" },
-      { title: "학습, 체험 신청" },
-    ],
-  },
-  {
-    title: "우리아이 현황",
-    contents: [
-      { title: "종합" },
-      { title: "과목별 학습" },
-      { title: "독서 선택 활동" },
-    ],
-  },
-];
+import NavBarData from "data/data.json";
+const data = NavBarData.NavBarData;
 const NavList = (props) => {
   return (
     <li className="NavList__list">
-      <Link to={`/?page=${props.oneData.title}`}>{props.oneData.title}</Link>
+      <Link to={`/${props.oneData.page}`}>{props.oneData.title}</Link>
       <ul className="NavList__contents">
         {props.oneData.contents.map((d, i) => (
           <li className={`NavList__content-item-${i + 1}`}>{d.title}</li>
@@ -36,34 +20,44 @@ const NavList = (props) => {
 class NavBar extends React.Component {
   state = {
     fixed: false,
+    isOpen: false,
+  };
+  onSetFixed = (flag) => {
+    this.setState({ fixed: flag });
   };
   componentDidMount() {
-    this.listenToScrollEvent();
+    listenToScrollEvent(this.onSetFixed);
+    // this.listenToScrollEvent();
   }
 
   componentDidUpdate(prevProps, prevState, snapshot) {}
 
-  listenToScrollEvent = () => {
-    document.addEventListener("scroll", () => {
-      requestAnimationFrame(() => {
-        if (window.pageYOffset > 120) {
-          this.setState({ fixed: true });
-        } else if (window.pageYOffset < 50) {
-          this.setState({ fixed: false });
-        }
-      });
-    });
+  handleShowAllClick = () => {
+    this.setState((prevState) => ({
+      isOpen: !prevState.isOpen,
+    }));
   };
-
   render() {
-    const { fixed } = this.state;
+    const { fixed, isOpen } = this.state;
     return (
-      <nav className={fixed ? "NavBar__container fixed" : "NavBar__container"}>
+      <nav
+        className={
+          fixed ? "NavBar__container NavBar__fixed" : "NavBar__container"
+        }
+      >
         <ul className="NavBar__ul">
           {data.map((d, i) => (
             <NavList oneData={d} />
           ))}
         </ul>
+        <div className="show-all">
+          <button
+            className={isOpen ? "close" : "open"}
+            onClick={this.handleShowAllClick}
+          >
+            <p>전체메뉴</p>
+          </button>
+        </div>
       </nav>
     );
   }

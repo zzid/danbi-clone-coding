@@ -1,29 +1,33 @@
 import React from "react";
 import { NavBar } from "components";
+import logoDesc from "data/logo_desc.png";
+import logo from "data/logo.png";
 import "./Header.scss";
 
-class Header extends React.Component {
-  render() {
-    return (
-      <div className="Header__container">
-        <div className="Header__header">
-          <h1>
-            <a href="/">wink</a>
-          </h1>
-          <p>
-            <img src="logo" alt="logo" />
-          </p>
-          <div className="Header__header-util">
-            <span>
-              <a>회원가입</a>
-            </span>
-            <span>내정보</span>
-            <span>로그인</span>
-          </div>
+const Header = () => {
+  return (
+    <div className="Header__container">
+      <div className="Header__header">
+        <h1>
+          <a href="/">
+            <img src={logo} alt="logo" />
+          </a>
+        </h1>
+        <p>
+          <img src={logoDesc} alt="logo-desc" />
+        </p>
+        <div className="Header__header-util">
+          <a href="#" className="join">
+            회원가입
+          </a>
+          <ul>
+            <li>내정보</li>
+            <li>로그인</li>
+          </ul>
         </div>
-        <NavBar />
       </div>
-    );
-  }
-}
+      <NavBar />
+    </div>
+  );
+};
 export default Header;

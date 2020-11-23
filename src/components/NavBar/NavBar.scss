@@ -1,26 +1,57 @@
 @import "src/sass/colors.scss";
 .NavBar__container {
-  margin: 0 auto;
-  left: 0;
-  z-index: 9999;
+  z-index: 9998;
   background-color: $sky-blue;
+  position: relative;
   height: 56px;
   width: 100%;
+  .show-all {
+    position: relative;
+    z-index: 9999;
+    button {
+      position: absolute;
+      top: 0;
+      left: 50%;
+      width: 56px;
+      height: 56px;
+      margin-left: 424px;
+      padding-top: 24px;
+      box-sizing: border-box;
+      background-color: #676969;
+      background-position: 50% 12px;
+      background-repeat: no-repeat;
+      color: #fff;
+      font-size: 12px;
+      font-weight: bold;
+      letter-spacing: -1px;
+      cursor: pointer;
+    }
+    button.open {
+      background-image: url(https://s.wink.co.kr/pc/images/icon_util_gnb.png);
+    }
+    button.close {
+      background-image: url(https://s.wink.co.kr/pc/images/icon_util_close.png);
+    }
+  }
 }
 
 .NavBar__ul {
   width: 960px;
-  list-style: none;
+  //position: absolute; // this helped
+  //margin: 0 232px; // this helped
+  margin: 0 auto;
+
   .NavList__list {
+    width: 181px;
     float: left;
+    position: relative;
     a {
+      position: relative;
       display: block;
       font-size: 18px;
       color: white;
       text-align: center;
-      text-decoration: none;
       line-height: 56px;
-      width: 100%;
 
       &:hover {
         background-color: $blue;
@@ -29,51 +60,46 @@
     &:hover .NavList__contents {
       /* animation */
       max-height: 1000px;
-      transition: max-height 0.5s ease-in;
+      transition: max-height 0.8s ease-in;
       overflow: hidden;
       /* animation end */
     }
 
     .NavList__contents {
+      position: absolute;
+      width: 181px;
+
       /* animation */
       max-height: 0;
-      transition: max-height 0.5s ease-out;
+      transition: max-height 0.8s ease-out;
       overflow: hidden;
       /* animation end */
 
+      background: #fff;
       list-style-type: none;
-      margin: 0;
-      padding: 0;
       li {
         text-align: left;
-        background: transparent !important;
         color: $grey;
         font-size: 14px;
         font-weight: normal;
         line-height: 1.4;
         border-left: 0.5px solid $sky-blue;
         border-right: 0.5px solid $sky-blue;
-        padding: 10px 30px;
+        padding: 10px 7px;
         &:first-child {
           border-top: 0.5px solid $sky-blue;
         }
         &:last-child {
           border-bottom: 0.5px solid $sky-blue;
         }
+        &:hover {
+          color: $sky-blue;
+        }
       }
     }
   }
 }
-.fixed {
+.NavBar__fixed {
   position: fixed;
   top: 0;
-
-  .NavBar__ul {
-    .NavList__list {
-      a {
-        top: 0;
-        margin-top: -16px;
-      }
-    }
-  }
 }

@@ -22,26 +22,28 @@ const data = [
   19,
   20,
 ];
-const MainPage = () => {
-  return (
-    <div>
-      {data.map((e) => (
-        <div style={{ height: "100px", display: "flex", position: "absolute" }}>
-          {e}
-          {e}
-          {e}
-          {e}
-          {e}
-          {e}
-          {e}
-          {e}
-          {e}
-          {e}
-          {e}
-          {e}
-        </div>
-      ))}
-    </div>
-  );
-};
+class MainPage extends React.Component {
+  render() {
+    return (
+      <div>
+        {data.map((e) => (
+          <div style={{ height: "100px" }}>
+            {e}
+            {e}
+            {e}
+            {e}
+            {e}
+            {e}
+            {e}
+            {e}
+            {e}
+            {e}
+            {e}
+            {e}
+          </div>
+        ))}
+      </div>
+    );
+  }
+}
 export default MainPage;
