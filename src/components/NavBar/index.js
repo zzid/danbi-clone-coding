@@ -24,12 +24,14 @@ class NavBar extends React.Component {
   state = {
     fixed: false,
     isOpen: false,
+    isOn: true,
   };
   onSetFixed = (flag) => {
     this.setState({ fixed: flag });
   };
   componentDidMount() {
     this.scrollRequest = listenToScrollEvent(this.onSetFixed);
+    console.log(this.scrollRequest);
     // this.listenToScrollEvent();
   }
 

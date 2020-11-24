@@ -10,6 +10,6 @@ export const listenToScrollEvent = (onSetFixed) => {
   });
 };
 export const removeScrollEvent = (request) => {
-  document.removeEventListener("scroll");
+  document.removeEventListener("scroll", () => {});
   cancelAnimationFrame(request);
 };

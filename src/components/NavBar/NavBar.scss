@@ -34,12 +34,16 @@
     }
   }
 }
-
+.mouse-on {
+  .NavList__list {
+    background-color: $blue;
+  }
+}
 .NavBar__ul {
   width: 960px;
+  position: absolute;
   //position: absolute; // this helped
-  //margin: 0 232px; // this helped
-  margin: 0 auto;
+  margin: 0 275px; // this helped
 
   .NavList__list {
     width: 181px;
@@ -54,6 +58,11 @@
       line-height: 56px;
 
       &:hover {
+        background-color: $blue;
+      }
+    }
+    &:hover {
+      a {
         background-color: $blue;
       }
     }
