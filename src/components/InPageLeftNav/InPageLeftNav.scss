@@ -3,13 +3,13 @@
   nav {
     width: 200px;
     padding-top: 44px;
-    border-left: 1px solid #e0e0e0;
-    border-right: 1px solid #e0e0e0;
+    border-left: 1px solid $light-grey;
+    border-right: 1px solid $light-grey;
     box-sizing: border-box;
     display: block;
     .nav-left-ul {
       li {
-        border-bottom: 1px solid #e0e0e0;
+        border-bottom: 1px solid $light-grey;
         box-sizing: border-box;
       }
     }
@@ -28,7 +28,7 @@
       line-height: 56px;
     }
     .is-active {
-      background-color: $blue;
+      background-color: $sky-blue;
       color: #fff;
     }
   }

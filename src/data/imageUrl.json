@@ -25,5 +25,49 @@
       "page": "lookapp",
       "img": "https://s.wink.co.kr/pc/images/wink/wink_looks_05_new.jpg"
     }
+  },
+  "subjectlist": {
+    "subjectko": {
+      "title": "한글(국어 영역)",
+      "page": "subjectko",
+      "img": "https://s.wink.co.kr/pc/1.1.0/wink_subject/subject_ko_01_top.jpg"
+    },
+    "subjectamth": {
+      "title": "수학 영역",
+      "page": "subjectamth",
+      "img": "https://s.wink.co.kr/pc/1.1.0/wink_subject/subject_math_01_top.jpg"
+    },
+    "subjecten": {
+      "title": "영어 영역",
+      "page": "subjecten",
+      "img": "https://s.wink.co.kr/pc/1.1.0/wink_subject/subject_en_01.jpg"
+    },
+    "subjectreading": {
+      "title": "독서 영역",
+      "page": "subjectreading",
+      "img": "https://s.wink.co.kr/pc/new_image/wink_subject/subject_reading_01.jpg"
+    },
+    "subjectstudy": {
+      "title": "선택활동",
+      "page": "subjectstudy",
+      "img": "https://s.wink.co.kr/pc/1.1.0/wink_subject/subject_study_01.jpg"
+    }
+  },
+  "agestudylist": {
+    "agefoursix": {
+      "title": "4~6세 오늘의 학습 예시",
+      "page": "agefoursix",
+      "img": "https://s.wink.co.kr/pc/images/wink/wink_age_01_0528.jpg"
+    },
+    "ageseven": {
+      "title": "7세 오늘의 학습 예시",
+      "page": "ageseven",
+      "img": "https://s.wink.co.kr/pc/images/wink/wink_age_02_0528.jpg"
+    },
+    "eight": {
+      "title": "8세 오늘의 학습 예시",
+      "page": "ageeight",
+      "img": "https://s.wink.co.kr/pc/images/wink/wink_age_03_0528.jpg"
+    }
   }
 }

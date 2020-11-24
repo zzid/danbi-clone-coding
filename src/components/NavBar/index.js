@@ -15,7 +15,12 @@ const NavList = (props) => {
       </NavLink>
       <ul className="NavList__contents">
         {props.oneData.contents.map((d, i) => (
-          <li className={`NavList__content-item-${i + 1}`}>{d.title}</li>
+          <li
+            className={`NavList__content-item-${i + 1}`}
+            key={`navlist-content-item-${i}`}
+          >
+            {d.title}
+          </li>
         ))}
       </ul>
     </li>
@@ -58,7 +63,7 @@ class NavBar extends React.Component {
       >
         <ul className="NavBar__ul">
           {Object.keys(data).map((d, i) => (
-            <NavList oneData={data[d]} />
+            <NavList oneData={data[d]} key={`top-nav-li-${i}`} />
           ))}
         </ul>
         <div className="show-all">

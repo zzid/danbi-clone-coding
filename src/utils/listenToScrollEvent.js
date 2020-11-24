@@ -13,3 +13,4 @@ export const removeScrollEvent = (request) => {
   document.removeEventListener("scroll", () => {});
   cancelAnimationFrame(request);
 };
+
