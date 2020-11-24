@@ -1,14 +1,26 @@
 import React from "react";
 import "./InPageLeftNav.scss";
 import { NavLink } from "react-router-dom";
-
+import {
+  listenToScrollEvent,
+  removeScrollEvent,
+} from "utils/listenToScrollEvent";
 class InPageLeftNav extends React.Component {
+  state = {
+    fixed: false,
+  };
+  onSetFixed = (flag) => {
+    this.setState({ fixed: flag });
+  };
+  componentDidMount() {
+    listenToScrollEvent(this.onSetFixed);
+  }
+
   render() {
     const { contents, title } = this.props.data;
-    // const title = contents.find((e) => e.page === params);
-    // const { setCurrentTitle } = this.props;
+    const { fixed } = this.state;
     return (
-      <div className="nav-wrap">
+      <div className={fixed ? "nav-wrap fixed" : "nav-wrap"}>
         <nav>
           <h2>{title}</h2>
           <ul className="nav-left-ul">

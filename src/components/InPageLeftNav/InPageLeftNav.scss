@@ -35,6 +35,10 @@
   float: left;
   position: relative;
 }
+.fixed {
+  position: fixed;
+  top: 56px;
+}
 .additional-ul {
   padding: 23px 0 21px;
   border-bottom: 1px solid $light-grey;
