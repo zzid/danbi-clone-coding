@@ -4,7 +4,7 @@
   background-color: $sky-blue;
   position: relative;
   height: 56px;
-  width: 100%;
+  //   width: 100%;
   .show-all {
     position: relative;
     z-index: 9999;
@@ -37,8 +37,10 @@
 
 .NavBar__ul {
   width: 960px;
-  //position: absolute; // this helped
-  //margin: 0 232px; // this helped
+  //   display: inline;
+  //   position: absolute; // this helped
+  //   margin: 0 280px; // this helped
+  //   overflow: hidden;
   margin: 0 auto;
 
   .NavList__list {
@@ -57,6 +59,7 @@
         background-color: $blue;
       }
     }
+
     &:hover .NavList__contents {
       /* animation */
       max-height: 1000px;
@@ -97,9 +100,14 @@
         }
       }
     }
+    .is-active {
+      background-color: $blue;
+    }
   }
 }
+
 .NavBar__fixed {
+  width: 100%;
   position: fixed;
   top: 0;
 }

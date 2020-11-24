@@ -1,0 +1,85 @@
+@import "../../sass/colors.scss";
+.wink-container {
+  position: relative;
+  top: 0;
+  bottom: 0;
+  width: 960px;
+  min-height: 1160px;
+  padding-bottom: 155px;
+  margin: 0 auto;
+  box-sizing: border-box;
+  z-index: 99;
+  .contents {
+    float: right;
+    width: 720px;
+    padding: 39px 0 133px;
+    background: #fff;
+
+    .tab-nav {
+      h3 {
+        margin-bottom: 14px;
+        color: $sky-blue;
+        font-size: 32px;
+      }
+      width: 720px;
+      background: #fff;
+      ul {
+        margin-bottom: 0;
+        height: 48px;
+        margin-bottom: 24px;
+        text-align: center;
+        line-height: 48px;
+        li {
+          width: 20%;
+          float: left;
+          a {
+            display: block;
+            height: 48px;
+            border: 1px solid #e0e0e0;
+            border-left-width: 0;
+            box-sizing: border-box;
+            background: #f7f7f7;
+            color: #666;
+          }
+          .is-active {
+            border-width: 0;
+            background: #676969;
+            color: #fff;
+            position: relative;
+            &:after {
+              content: "";
+              position: absolute;
+              bottom: -5px;
+              left: 50%;
+              width: 12px;
+              height: 5px;
+              margin-left: -6px;
+              background: url(https://s.wink.co.kr/pc/images/bg_edge.png)
+                no-repeat;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+.additional-div {
+  position: relative;
+  padding-bottom: 30px;
+  .link-btn {
+    display: inline-block;
+    position: absolute;
+    bottom: 0px;
+    left: 50%;
+    width: 350px;
+    margin-left: -175px;
+    background: #f03c78;
+    font-size: 23px;
+    font-weight: bold;
+    color: #fff;
+    padding: 9px 0;
+    text-align: center;
+    border-radius: 28px;
+    border: 1px solid #ca3f6e;
+  }
+}

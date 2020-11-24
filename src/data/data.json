@@ -1,123 +1,132 @@
-{ "NavBarData" : [
-  {
-    "title": "윙크소개",
-    "page": "wink",
-    "contents": [
-      {
-        "title": "윙크 한눈에 보기"
-      },
-      {
-        "title": "과목별 학습"
-      },
-      {
-        "title": "학부모님 사용 후기"
-      },
-      {
-        "title": "학습, 체험 신청",
-        "contents": [
-          {
-            "title": "무료 체험학습 신청"
-          },
-          {
-            "title": "유료 학습 신청"
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "title": "우리아이 현황",
-    "page": "mykids",
-    "contents": [
-      {
-        "title": "종합"
-      },
-      {
-        "title": "과목별 학습"
-      },
-      {
-        "title": "독서 선택 활동"
-      },
-      {
-        "title": "윙크 추천"
-      },
-      {
-        "title": "학습 설정",
-        "contents": [
-          {
-            "title": "콘텐츠 자동 재생 설정"
-          },
-          {
-            "title": "학습 이용 시간 제한"
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "title": "우리아이 선생님",
-    "page": "myteacher",
-    "contents": [
-      {
-        "title": "한글 수학"
-      },
-      {
-        "title": "영어"
-      }
-    ]
-  },
-  {
-    "title": "육아 교육마당",
-    "page": "info",
-    "contents": [
-      {
-        "title": "육아 교육 백과",
-        "contents": [
-          {
-            "title": "교육"
-          },
-          {
-            "title": "건강"
-          },
-          {
-            "title": "정서/발달"
-          },
-          {
-            "title": "독서"
-          },
-          {
-            "title": "유치원/취학준비"
-          }
-        ]
-      },
-      {
-        "title": "윙크 소식 & 교육 정보"
-      }
-    ]
-  },
-  {
-    "title": "고객센터",
-    "page": "customer",
-    "contents": [
-      {
-        "title": "공지사항"
-      },
-      {
-        "title": "이벤트"
-      },
-      {
-        "title": "자주하는 질문"
-      },
-      {
-        "title": "신고, 건의, 문의"
-      },
-      {
-        "title": "앱 다운로드"
-      },
-      {
-        "title": "선생님 모집"
-      }
-    ]
+{
+  "NavBarData": {
+    "wink": {
+      "title": "윙크 소개",
+      "page": "wink",
+      "contents": [
+        {
+          "title": "윙크 한눈에 보기",
+          "page": "lookview"
+        },
+        {
+          "title": "과목별 학습",
+          "page": "subjectko"
+        },
+        {
+          "title": "연령별 학습",
+          "page": "agestudy"
+        },
+        {
+          "title": "학부모님 사용 후기",
+          "page": "userpost"
+        },
+        {
+          "title": "학습, 체험 신청",
+          "page": "freestudy",
+          "contents": [
+            {
+              "title": "무료 체험학습 신청"
+            },
+            {
+              "title": "유료 학습 신청"
+            }
+          ]
+        }
+      ]
+    },
+    "mykids": {
+      "title": "우리아이 현황",
+      "page": "mykids",
+      "contents": [
+        {
+          "title": "종합"
+        },
+        {
+          "title": "과목별 학습"
+        },
+        {
+          "title": "독서 선택 활동"
+        },
+        {
+          "title": "윙크 추천"
+        },
+        {
+          "title": "학습 설정",
+          "contents": [
+            {
+              "title": "콘텐츠 자동 재생 설정"
+            },
+            {
+              "title": "학습 이용 시간 제한"
+            }
+          ]
+        }
+      ]
+    },
+    "myteacher": {
+      "title": "우리아이 선생님",
+      "page": "myteacher",
+      "contents": [
+        {
+          "title": "한글 수학"
+        },
+        {
+          "title": "영어"
+        }
+      ]
+    },
+    "info": {
+      "title": "육아 교육마당",
+      "page": "info",
+      "contents": [
+        {
+          "title": "육아 교육 백과",
+          "contents": [
+            {
+              "title": "교육"
+            },
+            {
+              "title": "건강"
+            },
+            {
+              "title": "정서/발달"
+            },
+            {
+              "title": "독서"
+            },
+            {
+              "title": "유치원/취학준비"
+            }
+          ]
+        },
+        {
+          "title": "윙크 소식 & 교육 정보"
+        }
+      ]
+    },
+    "customer": {
+      "title": "고객센터",
+      "page": "customer",
+      "contents": [
+        {
+          "title": "공지사항"
+        },
+        {
+          "title": "이벤트"
+        },
+        {
+          "title": "자주하는 질문"
+        },
+        {
+          "title": "신고, 건의, 문의"
+        },
+        {
+          "title": "앱 다운로드"
+        },
+        {
+          "title": "선생님 모집"
+        }
+      ]
+    }
   }
-]
 }

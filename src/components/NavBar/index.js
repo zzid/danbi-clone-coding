@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import {
   listenToScrollEvent,
   removeScrollEvent,
@@ -10,7 +10,9 @@ const data = NavBarData.NavBarData;
 const NavList = (props) => {
   return (
     <li className="NavList__list">
-      <Link to={`/${props.oneData.page}`}>{props.oneData.title}</Link>
+      <NavLink to={`/${props.oneData.page}`} activeClassName="is-active">
+        {props.oneData.title}
+      </NavLink>
       <ul className="NavList__contents">
         {props.oneData.contents.map((d, i) => (
           <li className={`NavList__content-item-${i + 1}`}>{d.title}</li>
@@ -53,8 +55,8 @@ class NavBar extends React.Component {
         }
       >
         <ul className="NavBar__ul">
-          {data.map((d, i) => (
-            <NavList oneData={d} />
+          {Object.keys(data).map((d, i) => (
+            <NavList oneData={data[d]} />
           ))}
         </ul>
         <div className="show-all">
