@@ -28,7 +28,12 @@ class IntroducePage extends React.Component {
       this.category = UrlData.subjectlist;
     } else if (params.match(/look/g)) {
       this.category = UrlData.looklist;
+    } else if (params.match(/agestudy/g)) {
+      this.category = UrlData.agestudylist;
+    } else if (params.match(/freestudy/g)) {
+      this.category = UrlData.freestudy;
     }
+    console.log(this.category);
     return (
       <div className="wink-container">
         <InPageLeftNav data={data} params={params} />

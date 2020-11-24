@@ -1,7 +1,11 @@
 @import url("https://cdn.jsdelivr.net/gh/moonspam/NanumBarunGothic@latest/nanumbarungothicsubset.css");
 
 .App {
+  position: relative;
+  height: 100%;
   width: 100%;
+  min-width: 1456px;
+  min-height: 1160px;
 }
 * {
   margin: 0;
@@ -26,6 +30,7 @@ ol {
 }
 a {
   text-decoration: none;
+  cursor: pointer;
 }
 .App_container {
   display: flex;

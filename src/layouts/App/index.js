@@ -14,10 +14,13 @@ class App extends React.Component {
           <Route exact path="/wink">
             <Redirect to="/wink/lookview" />
           </Route>
+          <Route exact path="/wink/agestudy">
+            <Redirect to="/wink/agefoursix" />
+          </Route>
           <Route path="/wink/:category" component={IntroducePage} />
         </Switch>
         <HelpBar />
-        {/* <Footer /> */}
+        <Footer />
       </div>
     );
   }

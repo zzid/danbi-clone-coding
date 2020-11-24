@@ -35,3 +35,32 @@
   float: left;
   position: relative;
 }
+.additional-ul {
+  padding: 23px 0 21px;
+  border-bottom: 1px solid $light-grey;
+  background: $grey;
+
+  .additional-li {
+    border-bottom: 0 !important;
+    &:first-child {
+      margin-top: 0;
+    }
+    padding-left: 16px;
+    margin-top: 10px;
+
+    .additional-navlink {
+      padding-left: 14px;
+      background: url(https://s.wink.co.kr/pc/images/bu_dot.png) 0 9px no-repeat;
+      color: #999 !important;
+      font-size: 16px;
+      line-height: 1.6;
+      display: block;
+      &:hover {
+        color: #666 !important;
+      }
+    }
+    .additional-is-active {
+      color: #666;
+    }
+  }
+}

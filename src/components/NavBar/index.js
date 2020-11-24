@@ -1,5 +1,5 @@
 import React from "react";
-import { NavLink } from "react-router-dom";
+import { NavLink, Link } from "react-router-dom";
 import {
   listenToScrollEvent,
   removeScrollEvent,
@@ -15,12 +15,13 @@ const NavList = (props) => {
       </NavLink>
       <ul className="NavList__contents">
         {props.oneData.contents.map((d, i) => (
-          <li
+          <Link
             className={`NavList__content-item-${i + 1}`}
             key={`navlist-content-item-${i}`}
+            to={`/wink/${d.page}`}
           >
             {d.title}
-          </li>
+          </Link>
         ))}
       </ul>
     </li>

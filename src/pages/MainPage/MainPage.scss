@@ -1,0 +1,122 @@
+.mainpage-container {
+  position: relative;
+  text-align: center;
+  background: url(https://s.wink.co.kr/pc/images/main/bg_main_slider.jpg)
+    repeat-x;
+
+  .mainpage-video {
+    position: absolute;
+    top: 98px;
+    width: 614px;
+    height: 350px;
+    left: 50%;
+    margin-left: -151px;
+    > div {
+      position: relative;
+      height: 358px;
+      img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: 10;
+      }
+      video {
+        width: 100%;
+        height: 350px;
+      }
+      span {
+        display: block;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 56px;
+        margin: 29px 0 0 -28px;
+      }
+      &:after {
+        display: block;
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 56px;
+        height: 59px;
+        margin: -30px 0 0 -28px;
+        background: url("https://s.wink.co.kr/pc/images/main/btn_video_play2.png")
+          no-repeat 0 0/56px;
+        cursor: pointer;
+      }
+    }
+  }
+  .on-play {
+    > div {
+      span {
+        display: none;
+      }
+      &:after {
+        opacity: 0.8;
+        display: block;
+        background: url("https://s.wink.co.kr/pc/images/main/btn_video_pause.png")
+          no-repeat 0 0/56px;
+      }
+    }
+  }
+  .mainpage-slider {
+    position: absolute;
+    top: 97px;
+    width: 313px;
+    height: 347px;
+    left: 50%;
+    margin-left: -479px;
+    border: 1px solid #ccc;
+    overflow: hidden;
+    > div {
+      position: relative;
+      display: block;
+    }
+    img {
+      width: 100%;
+    }
+  }
+  .mainpage-btns {
+    position: absolute;
+    text-align: center;
+    bottom: 98px;
+    width: 960px;
+    left: 50%;
+    margin-left: -480px;
+    margin-top: 24px;
+    a {
+      display: inline-block;
+      box-sizing: border-box;
+      vertical-align: middle;
+      position: relative;
+      cursor: pointer;
+
+      color: #fff;
+      font-size: 18px;
+      height: 37px;
+      line-height: 38px;
+      border-radius: 18px;
+      background: #f03c78;
+      padding: 0 30px;
+      margin: 0 10px;
+      -webkit-box-shadow: 1px 3px 7px 0px rgba(0, 0, 0, 0.3);
+      box-shadow: 1px 3px 7px 0px rgba(0, 0, 0, 0.3);
+    }
+    span {
+      position: absolute;
+      bottom: 42px;
+      left: 50%;
+      width: 515px;
+      height: 193px;
+      margin-left: -260px;
+      padding: 15px 0;
+    }
+  }
+  &:after {
+    content: "";
+    display: block;
+    clear: both;
+  }
+}

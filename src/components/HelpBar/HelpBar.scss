@@ -1,5 +1,4 @@
 .HelpBar__container {
-  float: right;
   position: absolute;
   top: 185px;
   left: 50%;
@@ -12,35 +11,64 @@
   box-shadow: 0 4px 3px 1px rgba(138, 138, 138, 0.18);
   z-index: 9999;
   .free-trial {
-    margin: 20px 0;
+    display: block;
     text-align: center;
+    margin-top: 20px;
     font-size: 20px;
+    font-weight: bold;
     p {
-      display: block;
-      margin-block-start: 1em;
-      margin-block-end: 1em;
-      margin-inline-start: 0px;
-      margin-inline-end: 0px;
-      span {
+      color: #666;
+      :first-child {
         color: #f03c78;
       }
     }
+    border-bottom: 1px solid #b0b0b0;
   }
   ul {
-    margin: 0px;
-    padding: 10px;
+    margin: 0;
+    padding: 0;
     font-weight: bold;
+
     li {
-      padding: 18px;
-      &:first-child {
-        border-top: 1.5px solid #bfbfbf;
+      padding: 19px 0 17px;
+      border-bottom: 1px solid #b0b0b0;
+
+      a {
+        display: block;
+        font-size: 15px;
+        color: #585858;
+        padding-left: 45px;
+        line-height: 30px;
+        background-repeat: no-repeat;
+        background-size: 41px 30px;
+        cursor: pointer;
       }
-      border-bottom: 1.5px solid #bfbfbf;
+    }
+    .help-li-request a {
+      background-image: url("https://s.wink.co.kr/pc/1.1.0/common/floating/bg_lay_paidstudy.png");
+      background-size: 30px;
+      background-position: 5px 3px;
+    }
+    .help-li-talk a {
+      background-image: url("https://s.wink.co.kr/pc/1.1.0/common/floating/bg_lay_talk.png");
+      background-size: 30px;
+      background-position: 5px 0;
+    }
+    .help-li-report a {
+      background-image: url("https://s.wink.co.kr/pc/images/bg_lay-report.png");
+    }
+
+    .help-li-recruit a {
+      background-size: 30px;
+      background-position: 8px 0;
+      background-image: url("https://s.wink.co.kr/pc/images/bg_lay-recruit.png");
     }
   }
   .HelpBar__cs-area {
+    margin-top: 15px;
     text-align: center;
     .title {
+      font-width: bold;
       font-size: 18px;
       color: #222;
     }

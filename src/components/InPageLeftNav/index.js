@@ -13,11 +13,28 @@ class InPageLeftNav extends React.Component {
           <h2>{title}</h2>
           <ul className="nav-left-ul">
             {contents.map((e, i) => (
-              <li key={`left-nav-li-${i}`}>
-                <NavLink to={`/wink/${e.page}`} activeClassName="is-active">
-                  {e.title}
-                </NavLink>
-              </li>
+              <>
+                <li key={`left-nav-li-${i}`}>
+                  <NavLink to={`/wink/${e.page}`} activeClassName="is-active">
+                    {e.title}
+                  </NavLink>
+                </li>
+                {e.contents && (
+                  <ul className="additional-ul">
+                    {e.contents.map((content, i) => (
+                      <li className="additional-li" key={`additional-li-${i}`}>
+                        <NavLink
+                          to="/"
+                          className="additional-navlink"
+                          activeClassName="additional-is-active"
+                        >
+                          {content.title}
+                        </NavLink>
+                      </li>
+                    ))}
+                  </ul>
+                )}
+              </>
             ))}
           </ul>
         </nav>

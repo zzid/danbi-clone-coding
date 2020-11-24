@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import {
   listenToScrollEvent,
   removeScrollEvent,
@@ -28,36 +29,28 @@ class HelpBar extends React.Component {
         }
       >
         <div className="free-trial">
-          <a>
+          <Link to="/wink/freestudy">
             <img src={winkBot} alt="img" />
             <p>
               <span>무료</span>
-              {" 학습 혜택 받기"}
+              <span> 학습 혜택 받기</span>
             </p>
-          </a>
+          </Link>
         </div>
         <ul>
-          <li>
-            <a>
-              {/*<img src="" alt="img" />*/}
-              윙크 유료 학습 신청
-            </a>
+          <li className="help-li-request">
+            <a>윙크 유료 학습 신청</a>
           </li>
-          <li>
-            <a>
-              {/*<img src="" alt="img" />*/}
+          <li className="help-li-talk">
+            <a href="https://customer.happytalk.io/public_v1/chat_v4/public_point?go=C&is_login=N&uid=&site_id=4000000177&category_id=64405&division_id=64406&usergb=W&title=%5B%ED%85%8C%EC%8A%A4%ED%8A%B8+%EC%83%81%EB%8B%B4%EC%B0%BD%5D">
               1:1 실시간 채팅 상담
             </a>
           </li>
-          <li>
-            <a>
-              {/*<img src="" alt="img" />*/}
-              건의및 불편 신고
-            </a>
+          <li className="help-li-report">
+            <Link to="/customer/report">건의및 불편 신고</Link>
           </li>
-          <li>
-            <a>
-              {/*<img src="" alt="img" />*/}
+          <li className="help-li-recruit">
+            <a href="http://recruit.wink.co.kr/client/recruit/?pagename=teacher/teacher">
               윙크 선생님 모집
             </a>
           </li>

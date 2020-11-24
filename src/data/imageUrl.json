@@ -54,20 +54,27 @@
     }
   },
   "agestudylist": {
-    "agefoursix": {
+    "agestudyfoursix": {
       "title": "4~6세 오늘의 학습 예시",
-      "page": "agefoursix",
+      "page": "agestudyfoursix",
       "img": "https://s.wink.co.kr/pc/images/wink/wink_age_01_0528.jpg"
     },
-    "ageseven": {
+    "agestudyseven": {
       "title": "7세 오늘의 학습 예시",
-      "page": "ageseven",
+      "page": "agestudyseven",
       "img": "https://s.wink.co.kr/pc/images/wink/wink_age_02_0528.jpg"
     },
-    "eight": {
+    "agestudyeight": {
       "title": "8세 오늘의 학습 예시",
-      "page": "ageeight",
+      "page": "agestudyeight",
       "img": "https://s.wink.co.kr/pc/images/wink/wink_age_03_0528.jpg"
+    }
+  },
+  "freestudy": {
+    "freestudy": {
+      "page": "freestudy",
+      "title": "?",
+      "img": "https://s.wink.co.kr/marketing/banner/pc/freeapply/event_freestudy_09.jpg"
     }
   }
 }

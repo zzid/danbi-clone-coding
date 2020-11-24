@@ -222,3 +222,4 @@ NavBar
 * resource 해제 하는거
 * navbar 제대로 안뜨는 부분
 * navbar 내의 + 버튼
+* How ref works?

@@ -1,2 +1,38 @@
-.Footer__container {
+@import "../../sass/colors.scss";
+.footer-container {
+  background: $green;
+  padding: 26px 0 17px;
+  > div {
+    position: relative;
+    width: 960px;
+    margin: 0 auto;
+    .footer-logo {
+      float: left;
+      margin-right: 40px;
+    }
+    &:after {
+      clear: both;
+      content: "";
+      display: block;
+    }
+  }
+  .character-1 {
+    top: -205px;
+    left: -55px;
+  }
+  .character-2 {
+    top: -188px;
+    left: 862px;
+  }
+  .img-cloud {
+    top: -282px;
+    left: -173px;
+  }
+  .img-ballon {
+    top: -412px;
+    left: 1153px;
+  }
+}
+.footer-img {
+  position: absolute;
 }

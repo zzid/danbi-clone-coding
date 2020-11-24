@@ -1,6 +1,7 @@
 import React from "react";
 import "./InPageCategory.scss";
 import { NavLink } from "react-router-dom";
+import UrlData from "../../data/imageUrl.json";
 
 class InPageCategory extends React.Component {
   state = {
@@ -8,24 +9,41 @@ class InPageCategory extends React.Component {
     params: "",
   };
   componentDidMount() {
-    let curData = this.props.data.contents.find(
-      (e) => e.page === this.props.params
-    );
-    this.setState({
-      curTitle: curData.title,
-      params: this.props.params,
-    });
-    console.log(this.state.curTitle);
+    if (this.props.params.match(/subject/g)) {
+      this.setState({
+        curTitle: "과목별 학습",
+        params: this.props.params,
+      });
+    } else if (this.props.params.match(/look/g)) {
+      this.setState({
+        curTitle: "윙크 한눈에 보기",
+        params: this.props.params,
+      });
+    } else if (this.props.params.match(/agestudy/g)) {
+      this.setState({
+        curTitle: "연령별 학습",
+        params: this.props.params,
+      });
+    }
   }
   componentDidUpdate(prevProps, prevState, snapshot) {
     if (prevState.params !== this.props.params) {
-      let curData = this.props.data.contents.find(
-        (e) => e.page === this.props.params
-      );
-      this.setState({
-        curTitle: curData.title,
-        params: this.props.params,
-      });
+      if (this.props.params.match(/subject/g)) {
+        this.setState({
+          curTitle: "과목별 학습",
+          params: this.props.params,
+        });
+      } else if (this.props.params.match(/look/g)) {
+        this.setState({
+          curTitle: "윙크 한눈에 보기",
+          params: this.props.params,
+        });
+      } else if (this.props.params.match(/agestudy/g)) {
+        this.setState({
+          curTitle: "연령별 학습",
+          params: this.props.params,
+        });
+      }
     }
   }
 
