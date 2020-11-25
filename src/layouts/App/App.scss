@@ -44,6 +44,39 @@ p {
   margin-inline-end: 0px;
 }
 
+.page-container {
+  position: relative;
+  top: 0;
+  bottom: 0;
+  width: 960px;
+  min-height: 1160px;
+  padding-bottom: 155px;
+  margin: 0 auto;
+  box-sizing: border-box;
+  z-index: 99;
+  .contents {
+    float: right;
+    width: 720px;
+    padding: 39px 0 133px;
+    background: #fff;
+  }
+  &:after {
+    content: "";
+    display: block;
+    clear: both;
+  }
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: normal;
+}
+.hgroup {
+  position: relative;
+}
 // can't understand this
 //ul {
 //  display: block;

@@ -35,7 +35,7 @@ class IntroducePage extends React.Component {
     }
     console.log(this.category);
     return (
-      <div className="wink-container">
+      <div className="page-container">
         <InPageLeftNav data={data} params={params} />
         <div className="contents">
           <InPageCategory
@@ -43,7 +43,7 @@ class IntroducePage extends React.Component {
             category={this.category}
             params={params}
           />
-          <div className="additional-div">
+          <div className="wink-div">
             <img src={this.category[params].img} alt={`${params}`} />
             {params === "lookdevice" && (
               <a

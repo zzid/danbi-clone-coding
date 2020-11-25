@@ -1,27 +1,6 @@
 @import "../../sass/colors.scss";
-.wink-container {
-  position: relative;
-  top: 0;
-  bottom: 0;
-  width: 960px;
-  min-height: 1160px;
-  padding-bottom: 155px;
-  margin: 0 auto;
-  box-sizing: border-box;
-  z-index: 99;
-  .contents {
-    float: right;
-    width: 720px;
-    padding: 39px 0 133px;
-    background: #fff;
-  }
-  &:after {
-    content: "";
-    display: block;
-    clear: both;
-  }
-}
-.additional-div {
+
+.wink-div {
   position: relative;
   padding-bottom: 30px;
   .link-btn {

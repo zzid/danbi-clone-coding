@@ -1,0 +1,80 @@
+.show-all-nav-bar-container {
+  max-height: 1000px;
+  transition: max-height 0.5s ease-in;
+  overflow: hidden;
+  visibility: visible;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 961px;
+  margin-left: -481px;
+  border: 1px solid #00a5d5;
+  box-sizing: border-box;
+  background: #fff url(https://s.wink.co.kr/pc/images/gnb_line.gif) repeat-y;
+  box-shadow: 0 3px 7px rgba(0, 0, 0, 0.15);
+  .upper,
+  .downer {
+    overflow: hidden;
+    min-height: 370px;
+    .show-all-menu-list {
+      float: left;
+      width: 181px;
+      height: 100%;
+      position: relative;
+      > a {
+        display: block;
+        height: 56px;
+        background: #08bbd5;
+        text-align: center;
+        color: #fff;
+        font-size: 18px;
+        font-weight: bold;
+        line-height: 56px;
+      }
+      > ul > li {
+        &:first-child {
+          margin-top: 15px;
+        }
+        float: none;
+        width: 100%;
+        margin-top: 3px;
+        padding: 0 16px;
+        position: relative;
+        > a {
+          color: #666;
+          font-size: 14px;
+          font-weight: normal;
+          line-height: 1.8;
+        }
+      }
+    }
+  }
+  .downer {
+    clear: both;
+    min-height: 0;
+    overflow: visible;
+    a {
+      &:first-child {
+        border-right: 1px solid #e0e0e0;
+      }
+    }
+    li {
+      &:last-child {
+        margin-bottom: 15px;
+      }
+    }
+  }
+  > div {
+    &:after {
+      display: block;
+      content: "";
+      clear: both;
+    }
+  }
+}
+.show-all-hide {
+  border: none;
+  max-height: 0;
+  transition: max-height 0.5s ease-out;
+  overflow: hidden;
+}

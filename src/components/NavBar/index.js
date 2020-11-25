@@ -4,6 +4,7 @@ import {
   listenToScrollEvent,
   removeScrollEvent,
 } from "utils/listenToScrollEvent";
+import { ShowAllNavBar } from "components";
 import "./NavBar.scss";
 import NavBarData from "data/data.json";
 const data = NavBarData.NavBarData;
@@ -31,8 +32,7 @@ const NavList = (props) => {
 class NavBar extends React.Component {
   state = {
     fixed: false,
-    isOpen: false,
-    isOn: true,
+    isShowAll: false,
   };
   onSetFixed = (flag) => {
     this.setState({ fixed: flag });
@@ -51,30 +51,31 @@ class NavBar extends React.Component {
 
   handleShowAllClick = () => {
     this.setState((prevState) => ({
-      isOpen: !prevState.isOpen,
+      isShowAll: !prevState.isShowAll,
     }));
   };
   render() {
-    const { fixed, isOpen } = this.state;
+    const { fixed, isShowAll } = this.state;
     return (
       <nav
         className={
           fixed ? "NavBar__container NavBar__fixed" : "NavBar__container"
         }
       >
-        <ul className="NavBar__ul">
+        <ul className={isShowAll ? "NavBar__ul hide-this" : "NavBar__ul"}>
           {Object.keys(data).map((d, i) => (
             <NavList oneData={data[d]} key={`top-nav-li-${i}`} />
           ))}
         </ul>
         <div className="show-all">
           <button
-            className={isOpen ? "close" : "open"}
+            className={isShowAll ? "close" : "open"}
             onClick={this.handleShowAllClick}
           >
             <p>전체메뉴</p>
           </button>
         </div>
+        <ShowAllNavBar classProp={isShowAll} />
       </nav>
     );
   }

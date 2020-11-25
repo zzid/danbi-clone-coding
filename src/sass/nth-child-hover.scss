@@ -1,0 +1,9 @@
+@mixin nth-child-bgimg($n, $url) {
+  &:nth-child(#{$n}) {
+    > a {
+      &:before {
+        background-image: url($url);
+      }
+    }
+  }
+}

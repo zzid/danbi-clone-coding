@@ -4,3 +4,4 @@ export { default as NavBar } from "./NavBar";
 export { default as HelpBar } from "./HelpBar";
 export { default as InPageLeftNav } from "./InPageLeftNav";
 export { default as InPageCategory } from "./InPageCategory";
+export { default as ShowAllNavBar } from "./ShowAllNavBar";

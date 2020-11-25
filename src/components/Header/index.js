@@ -10,7 +10,7 @@ const Header = () => {
       <div className="Header__header">
         <h1>
           <a href="/">
-            <img src={logo} alt="logo" />
+            <img src="https://s.wink.co.kr/pc/images/logo.png" alt="logo" />
           </a>
         </h1>
         <p>

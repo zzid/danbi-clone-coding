@@ -39,19 +39,28 @@
       "page": "mykids",
       "contents": [
         {
-          "title": "종합"
+          "title": "종합",
+          "page": "total"
         },
         {
-          "title": "과목별 학습"
+          "title": "과목별 학습",
+          "page": "subjectkor"
         },
         {
-          "title": "독서 선택 활동"
+          "title": "초등준비",
+          "page": ""
         },
         {
-          "title": "윙크 추천"
+          "title": "독서 선택 활동",
+          "page": "reading"
+        },
+        {
+          "title": "윙크 추천",
+          "page": "teacher"
         },
         {
           "title": "학습 설정",
+          "page": "learning",
           "contents": [
             {
               "title": "콘텐츠 자동 재생 설정"
@@ -68,10 +77,12 @@
       "page": "myteacher",
       "contents": [
         {
-          "title": "한글 수학"
+          "title": "한글 수학",
+          "page": "myteacherkorean"
         },
         {
-          "title": "영어"
+          "title": "영어",
+          "page": "myteacherenglish"
         }
       ]
     },
@@ -81,6 +92,7 @@
       "contents": [
         {
           "title": "육아 교육 백과",
+          "page": "infomain",
           "contents": [
             {
               "title": "교육"
@@ -100,7 +112,8 @@
           ]
         },
         {
-          "title": "윙크 소식 & 교육 정보"
+          "title": "윙크 소식 & 교육 정보",
+          "page": "edulist"
         }
       ]
     },
@@ -109,24 +122,70 @@
       "page": "customer",
       "contents": [
         {
-          "title": "공지사항"
+          "title": "공지사항",
+          "page": "noticelist"
         },
         {
-          "title": "이벤트"
+          "title": "이벤트",
+          "page": "event"
         },
         {
-          "title": "자주하는 질문"
+          "title": "자주하는 질문",
+          "page": ""
         },
         {
-          "title": "신고, 건의, 문의"
+          "title": "신고, 건의, 문의",
+          "page": "report"
         },
         {
-          "title": "앱 다운로드"
+          "title": "앱 다운로드",
+          "page": "download"
         },
         {
-          "title": "선생님 모집"
+          "title": "선생님 모집",
+          "page": "teacher",
+          "contents": [
+            {
+              "title": "학부모님 공감센터",
+              "phone": "1522-1244",
+              "openingHour": "월-금요일 10:00~20:00"
+            }
+          ]
         }
       ]
+    }
+  },
+  "ShowAllAdditional": {
+    "myinfo": {
+      "title": "내 정보",
+      "page": "",
+      "contents": [
+        {
+          "title": "내 정보",
+          "page": "",
+          "contents": [{}]
+        },
+        {
+          "title": "학습 정보",
+          "page": ""
+        },
+        {
+          "title": "결제 내역",
+          "page": ""
+        },
+        {
+          "title": "배송 내역",
+          "page": ""
+        },
+        {
+          "title": "AS 신청 내역",
+          "page": ""
+        }
+      ]
+    },
+    "companyInfo": {
+      "title": "회사 소개",
+      "page": ""
     }
   }
 }
