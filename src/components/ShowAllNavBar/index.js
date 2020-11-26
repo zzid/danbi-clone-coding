@@ -18,8 +18,8 @@ const ShowAllNavBar = ({ classProp }) => {
           <div className={"show-all-menu-list"}>
             <Link to={`/${NavBarData[key].page}`}>{NavBarData[key].title}</Link>
             <ul>
-              {NavBarData[key].contents.map((content) => (
-                <li>
+              {NavBarData[key].contents.map((content, i) => (
+                <li key={`show-all-nav-upper-content-${i}`}>
                   <Link to={`/${NavBarData[key].page}/${content.page}`}>
                     {content.title}
                   </Link>
@@ -36,8 +36,8 @@ const ShowAllNavBar = ({ classProp }) => {
               {ShowAllAdditional[key].title}
             </Link>
             <ul>
-              {ShowAllAdditional[key].contents?.map((content) => (
-                <li>
+              {ShowAllAdditional[key].contents?.map((content, i) => (
+                <li key={`show-all-nav-downer-content-${i}`}>
                   <Link to={"#"}>{content.title}</Link>
                 </li>
               ))}

@@ -53,6 +53,12 @@
       "img": "https://s.wink.co.kr/pc/1.1.0/wink_subject/subject_study_01.jpg"
     }
   },
+  "userpostlist": {
+    "userpost": {
+      "title": "학부모님 사용 후기",
+      "page": "userpost"
+    }
+  },
   "agestudylist": {
     "agestudyfoursix": {
       "title": "4~6세 오늘의 학습 예시",
@@ -70,7 +76,7 @@
       "img": "https://s.wink.co.kr/pc/images/wink/wink_age_03_0528.jpg"
     }
   },
-  "freestudy": {
+  "freestudylist": {
     "freestudy": {
       "page": "freestudy",
       "title": "?",

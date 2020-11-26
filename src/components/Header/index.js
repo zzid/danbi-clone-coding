@@ -1,7 +1,6 @@
 import React from "react";
 import { NavBar } from "components";
 import logoDesc from "data/logo_desc.png";
-import logo from "data/logo.png";
 import "./Header.scss";
 
 const Header = () => {

@@ -19,7 +19,7 @@ const NavList = (props) => {
           <Link
             className={`NavList__content-item-${i + 1}`}
             key={`navlist-content-item-${i}`}
-            to={`/wink/${d.page}`}
+            to={`/${props.oneData.page}/${d.page}`}
           >
             {d.title}
           </Link>
@@ -28,7 +28,6 @@ const NavList = (props) => {
     </li>
   );
 };
-
 class NavBar extends React.Component {
   state = {
     fixed: false,

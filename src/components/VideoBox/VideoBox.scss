@@ -1,0 +1,52 @@
+//.video-box-container > li {
+//  float: left;
+//}
+//.video-box-container {
+//  .video-box {
+//    height: 88px;
+//    width: 128px;
+//    margin-bottom: 5px;
+//
+//    position: relative;
+//    border: 1px solid #d5d5d5;
+//    background-repeat: no-repeat;
+//    background-position: center;
+//    background-size: 100% 100%;
+//    > div {
+//      bottom: 4px;
+//      left: 6px;
+//      right: 6px;
+//      height: 16px;
+//      font-size: 11px;
+//      color: #222;
+//      text-align: center;
+//      border-radius: 8px;
+//      background: rgba(255, 255, 255, 0.8);
+//      line-height: 18px;
+//
+//      position: absolute;
+//      cursor: pointer;
+//      &:after {
+//        content: "";
+//        display: block;
+//        position: absolute;
+//        width: 25px;
+//        height: 25px;
+//        right: -4px;
+//        top: -5px;
+//        background: url("https://s.wink.co.kr/pc/images/btn_play.png") no-repeat
+//          center/25px;
+//      }
+//    }
+//    &:first-child {
+//      background-image: url("https://s.wink.co.kr/pc/images/main/korean_study.jpg");
+//    }
+//    &:nth-child(2) {
+//      background-image: url("https://s.wink.co.kr/pc/images/main/english_study.jpg");
+//    }
+//    &:nth-child(3) {
+//      background-image: url("https://s.wink.co.kr/pc/images/main/math_study.jpg");
+//      margin-bottom: 0;
+//    }
+//  }
+//}

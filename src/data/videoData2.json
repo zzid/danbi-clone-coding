@@ -1,0 +1,25 @@
+{
+  "title": "윙크를 말한다",
+  "videos": {
+    "parent-1": {
+      "title": "서유경 학부모님 (4세, 남)",
+      "link": "https://s.wink.co.kr/pcweb_sample/parentinterview_1.mp4",
+      "value": "parent-1"
+    },
+    "parent-2": {
+      "title": "양현순 학부모님 (7세, 여)",
+      "link": "https://s.wink.co.kr/pcweb_sample/parentinterview_2.mp4",
+      "value": "parent-2"
+    },
+    "parent-3": {
+      "title": "하현미 학부모님 (6세, 여)",
+      "link": "https://s.wink.co.kr/pcweb_sample/parentinterview_3.mp4",
+      "value": "parent-3"
+    },
+    "parent-4": {
+      "title": "조세연 학부모님 (5세, 여)",
+      "link": "https://s.wink.co.kr/pcweb_sample/parentinterview_4.mp4",
+      "value": "parent-4"
+    }
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "title": "재미있고 유익한 윙크 콘텐츠",
+  "videos": {
+    "video-korean": {
+      "title": "한글 콘텐츠 보기",
+      "link": "http://s.wink.co.kr/pcweb_sample/contents_video_02_02.mp4",
+      "value": "video-korean"
+    },
+    "video-english": {
+      "title": "영어 콘텐츠 보기",
+      "link": "http://s.wink.co.kr/pcweb_sample/contents_video_02_03.mp4",
+      "value": "video-english"
+    },
+    "video-math": {
+      "title": "수학 콘텐츠 보기",
+      "link": "http://s.wink.co.kr/pcweb_sample/contents_video_02_04.mp4",
+      "value": "video-math"
+    }
+  }
+}

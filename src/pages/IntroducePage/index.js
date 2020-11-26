@@ -1,10 +1,15 @@
 import React from "react";
-import NavBarData from "data/data.json";
-import UrlData from "data/imageUrl.json";
 import "./IntroducePage.scss";
 import { InPageLeftNav, InPageCategory } from "components";
-const data = NavBarData.NavBarData.wink;
 
+import NavBarData from "data/data.json";
+import UrlData from "data/imageUrl.json";
+
+const data = NavBarData.NavBarData.wink;
+const pageData = Object.assign(
+  {},
+  Object.keys(UrlData).map((key) => UrlData[key])
+);
 class IntroducePage extends React.Component {
   // state = {
   //   curCategory: null,
@@ -23,6 +28,7 @@ class IntroducePage extends React.Component {
   // }
   render() {
     const params = this.props.match.params.category;
+    this.category = UrlData[``];
     // const { curCategory } = this.state;
     if (params.match(/subject/g)) {
       this.category = UrlData.subjectlist;
@@ -31,9 +37,14 @@ class IntroducePage extends React.Component {
     } else if (params.match(/agestudy/g)) {
       this.category = UrlData.agestudylist;
     } else if (params.match(/freestudy/g)) {
-      this.category = UrlData.freestudy;
+      this.category = UrlData.freestudylist;
     }
     console.log(this.category);
+    console.log("pageData :", pageData);
+    console.log(
+      "next : ",
+      Object.keys(UrlData).map((key) => UrlData[key])
+    );
     return (
       <div className="page-container">
         <InPageLeftNav data={data} params={params} />

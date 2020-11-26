@@ -48,7 +48,7 @@
         },
         {
           "title": "초등준비",
-          "page": ""
+          "page": "elementary"
         },
         {
           "title": "독서 선택 활동",
@@ -131,7 +131,7 @@
         },
         {
           "title": "자주하는 질문",
-          "page": ""
+          "page": "faq"
         },
         {
           "title": "신고, 건의, 문의",
@@ -158,34 +158,34 @@
   "ShowAllAdditional": {
     "myinfo": {
       "title": "내 정보",
-      "page": "",
+      "page": "?",
       "contents": [
         {
           "title": "내 정보",
-          "page": "",
+          "page": "?",
           "contents": [{}]
         },
         {
           "title": "학습 정보",
-          "page": ""
+          "page": "?"
         },
         {
           "title": "결제 내역",
-          "page": ""
+          "page": "?"
         },
         {
           "title": "배송 내역",
-          "page": ""
+          "page": "?"
         },
         {
           "title": "AS 신청 내역",
-          "page": ""
+          "page": "?"
         }
       ]
     },
     "companyInfo": {
       "title": "회사 소개",
-      "page": ""
+      "page": "?"
     }
   }
 }

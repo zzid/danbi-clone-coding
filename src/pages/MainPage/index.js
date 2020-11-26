@@ -1,11 +1,29 @@
 import React from "react";
 import "./MainPage.scss";
 import { Link } from "react-router-dom";
+import { TableComponent, ModalComponent } from "components";
+
+import videoHighlight from "data/videoData-highlight.json";
+import videoDataObject1 from "data/videoData1.json";
+import videoDataObject2 from "data/videoData2.json";
+import tableDataObject1 from "data/tableData1.json";
+import tableDataObject2 from "data/tableData2.json";
+import VideoBox from "../../components/VideoBox";
+
+// const tableData1 = tableDataObject1.data;
+const videoData = Object.assign(
+  {},
+  videoHighlight,
+  videoDataObject1.videos,
+  videoDataObject2.videos
+);
+
 class MainPage extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
       onPlay: false,
+      curVideo: null,
     };
     this.videoRef = React.createRef();
   }
@@ -18,8 +36,17 @@ class MainPage extends React.Component {
     }));
     this.state.onPlay ? this.videoRef.pause() : this.videoRef.play();
   };
+  onClickVideoContent = (event) => {
+    const {
+      target: { id },
+    } = event;
+    this.setState({ curVideo: videoData[id] });
+  };
+  onClickVideoCancel = () => {
+    this.setState({ curVideo: null });
+  };
   render() {
-    const { onPlay } = this.state;
+    const { onPlay, curVideo } = this.state;
     return (
       <div className="mainpage-container">
         <div className={"mainpage-first"}>
@@ -67,24 +94,46 @@ class MainPage extends React.Component {
         </div>
         <div className={"mainpage-contents"}>
           <div className={"mainpage-contents-section-1"}>
-            <div className={"mainpage-contents-section-1-left"}>
-              <h2 className={"hgroup"}>학부모님 사용후기</h2>
-            </div>
-            <div className={"mainpage-contents-section-1-right"}>
+            <TableComponent tableDataObject={tableDataObject1} />
+            <div className={"mainpage-contents-videos right"}>
               <h2 className={"hgroup"}>재미있고 유익한 윙크 콘텐츠</h2>
-              <div className={"video-area"}>
-                <div className={"title-video"}>
-                  <div>윙크 콘텐츠 하이라이트</div>
+              <div>
+                <div className={"video-area"}>
+                  <div
+                    className={"video-title"}
+                    onClick={this.onClickVideoContent}
+                    id="video-highlight"
+                  >
+                    윙크 콘텐츠 하이라이트
+                  </div>
                 </div>
+                <VideoBox
+                  classNameProp={"first"}
+                  videoObject={videoDataObject1}
+                  onClickVideoContent={this.onClickVideoContent}
+                />
               </div>
-              <ul>
-                <li>
-                  <div>한글 콘텐츠 보기</div>
-                </li>
-              </ul>
+            </div>
+          </div>
+          <div className={"mainpage-contents-section-2"}>
+            <TableComponent tableDataObject={tableDataObject2} />
+            <div className={"mainpage-contents-videos right"}>
+              <h2 className={"hgroup"}>윙크를 말한다.</h2>
+              <VideoBox
+                classNameProp={"second"}
+                videoObject={videoDataObject2}
+                onClickVideoContent={this.onClickVideoContent}
+              />
             </div>
           </div>
         </div>
+        {curVideo && (
+          <ModalComponent
+            showModal={true}
+            onClickVideoCancel={this.onClickVideoCancel}
+            videoInfo={curVideo}
+          />
+        )}
       </div>
     );
   }

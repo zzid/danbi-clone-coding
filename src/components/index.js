@@ -5,3 +5,5 @@ export { default as HelpBar } from "./HelpBar";
 export { default as InPageLeftNav } from "./InPageLeftNav";
 export { default as InPageCategory } from "./InPageCategory";
 export { default as ShowAllNavBar } from "./ShowAllNavBar";
+export { default as TableComponent } from "./TableComponent";
+export { default as ModalComponent } from "./ModalComponent";

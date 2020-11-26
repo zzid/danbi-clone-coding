@@ -88,11 +88,10 @@
         display: inline-block;
         box-sizing: border-box;
         vertical-align: middle;
-        position: relative;
-        cursor: pointer;
-
+        text-align: center;
         color: #fff;
         font-size: 18px;
+        position: relative;
         height: 37px;
         line-height: 38px;
         border-radius: 18px;
@@ -100,15 +99,23 @@
         padding: 0 30px;
         margin: 0 10px;
         box-shadow: 1px 3px 7px 0px rgba(0, 0, 0, 0.3);
+        cursor: pointer;
+        > span {
+          display: inline-block;
+          position: absolute;
+          bottom: 38px;
+          left: 50%;
+          width: 515px;
+          margin-left: -260px;
+          //height: 193px;
+          //padding: 15px 0;
+        }
       }
-      span {
-        position: absolute;
-        bottom: 42px;
-        left: 50%;
-        width: 515px;
-        height: 193px;
-        margin-left: -260px;
-        padding: 15px 0;
+
+      &:after {
+        content: "";
+        display: block;
+        clear: both;
       }
     }
   }
@@ -128,87 +135,172 @@
     }
     .mainpage-contents-section-1 {
       margin: 0 auto 40px;
-      > .mainpage-contents-section-1-left {
+      .mainpage-contents-section-1-left {
         float: left;
         width: 545px;
       }
-      > .mainpage-contents-section-1-right {
-        float: right;
-        width: 401px;
+      .mainpage-contents-videos {
         .video-area {
-          .title-video {
-            position: relative;
-            float: left;
-            width: 263px;
-            height: 278px;
-            background: #ffd02c
-              url("https://s.wink.co.kr/pc/images/main/highlight_study.jpg")
-              no-repeat 0 0;
-            //margin-bottom: 0;
-            margin-right: 6px;
-            border-radius: 0 0 15px 15px;
-            > div {
-              bottom: 0;
-              left: 0;
-              right: 0;
-              width: calc(100% - 40px);
-              font-size: 20px;
-              height: 44px;
-              line-height: 44px;
-              padding-right: 40px;
-              color: #222;
-              text-align: center;
+          position: relative;
+          float: left;
+          width: 263px;
+          height: 278px;
+          background: #ffd02c
+            url("https://s.wink.co.kr/pc/images/main/highlight_study.jpg")
+            no-repeat 0 0;
+          margin-bottom: 0;
+          margin-right: 6px;
+          border-radius: 0 0 15px 15px;
+
+          .video-title {
+            bottom: 0;
+            left: 0;
+            right: 0;
+            font-size: 20px;
+            height: 44px;
+            line-height: 44px;
+            padding-right: 40px;
+
+            color: #222;
+            text-align: center;
+
+            position: absolute;
+            cursor: pointer;
+
+            &:after {
+              width: 38px;
+              height: 38px;
+              right: 10px;
+              top: 2px;
+              background-size: 38px;
+
               position: absolute;
-              cursor: pointer;
-              &:after {
-                width: 38px;
-                height: 38px;
-                right: 10px;
-                top: 2px;
-                background-size: 38px;
-                position: absolute;
-                background: url("https://s.wink.co.kr/pc/images/btn_play.png")
-                  no-repeat center/25px;
-              }
+              background: url("https://s.wink.co.kr/pc/images/btn_play.png")
+                no-repeat center/25px;
             }
-          }
-        }
-        > ul {
-          li {
-            position: relative;
-            border: 1px solid #d5d5d5;
-            background-repeat: no-repeat;
-            background-position: center;
-            background-size: 100% 100%;
-            height: 88px;
-            width: 128px;
-            margin-bottom: 5px;
-            float: left;
-            > div {
-              bottom: 4px;
-              left: 6px;
-              right: 6px;
-              height: 16px;
-              font-size: 11px;
-              color: #222;
-              text-align: center;
-              border-radius: 8px;
-              background: rgba(255, 255, 255, 0.8);
-              line-height: 18px;
-            }
-          }
-          &:first-child {
-            background-image: url("https://s.wink.co.kr/pc/images/main/korean_study.jpg");
           }
         }
       }
     }
+    .mainpage-contents-section-2 {
+      .mainpage-contents-videos {
+      }
+    }
   }
+}
+.right {
+  float: right;
+  width: 401px;
 }
 div {
   &:after {
     content: "";
     display: block;
     clear: both;
+  }
+}
+
+.video-box-container > li {
+  float: left;
+}
+.video-box-container-first {
+  .video-box {
+    height: 88px;
+    width: 128px;
+    margin-bottom: 5px;
+
+    position: relative;
+    border: 1px solid #d5d5d5;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100% 100%;
+    > div {
+      bottom: 4px;
+      left: 6px;
+      right: 6px;
+      height: 16px;
+      font-size: 11px;
+      color: #222;
+      text-align: center;
+      border-radius: 8px;
+      background: rgba(255, 255, 255, 0.8);
+      line-height: 18px;
+
+      position: absolute;
+      cursor: pointer;
+      &:after {
+        content: "";
+        display: block;
+        position: absolute;
+        width: 25px;
+        height: 25px;
+        right: -4px;
+        top: -5px;
+        background: url("https://s.wink.co.kr/pc/images/btn_play.png") no-repeat
+          center/25px;
+      }
+    }
+    &:first-child {
+      background-image: url("https://s.wink.co.kr/pc/images/main/korean_study.jpg");
+    }
+    &:nth-child(2) {
+      background-image: url("https://s.wink.co.kr/pc/images/main/english_study.jpg");
+    }
+    &:nth-child(3) {
+      background-image: url("https://s.wink.co.kr/pc/images/main/math_study.jpg");
+      margin-bottom: 0;
+    }
+  }
+}
+.video-box-container-second {
+  .video-box {
+    height: 139px;
+    width: 196px;
+    margin-right: 4px;
+
+    position: relative;
+    border: 1px solid #d5d5d5;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100% 100%;
+    > div {
+      bottom: 4px;
+      left: 6px;
+      right: 6px;
+      height: 16px;
+      font-size: 11px;
+      color: #222;
+      text-align: center;
+      border-radius: 8px;
+      background: rgba(255, 255, 255, 0.8);
+      line-height: 18px;
+
+      position: absolute;
+      cursor: pointer;
+      &:after {
+        content: "";
+        display: block;
+        position: absolute;
+        width: 25px;
+        height: 25px;
+        right: -4px;
+        top: -5px;
+        background: url("https://s.wink.co.kr/pc/images/btn_play.png") no-repeat
+          center/25px;
+      }
+    }
+    &:first-child {
+      background-image: url("https://s.wink.co.kr/pcweb_sample/parentinterview_1.jpg");
+    }
+    &:nth-child(2) {
+      background-image: url("https://s.wink.co.kr/pcweb_sample/parentinterview_2.jpg");
+    }
+    &:nth-child(3) {
+      background-image: url("https://s.wink.co.kr/pcweb_sample/parentinterview_3.jpg");
+    }
+    &:last-child {
+      background-image: url("https://s.wink.co.kr/pcweb_sample/parentinterview_4.jpg");
+      margin-bottom: 0;
+    }
   }
 }

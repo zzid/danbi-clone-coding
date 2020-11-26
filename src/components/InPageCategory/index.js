@@ -25,6 +25,7 @@ class InPageCategory extends React.Component {
         params: this.props.params,
       });
     }
+    console.log(this.props.data);
   }
   componentDidUpdate(prevProps, prevState, snapshot) {
     if (prevState.params !== this.props.params) {
@@ -48,7 +49,7 @@ class InPageCategory extends React.Component {
   }
 
   render() {
-    const { category } = this.props;
+    const { category, data } = this.props;
     const { curTitle } = this.state;
     return (
       <div className="tab-nav">
@@ -58,7 +59,10 @@ class InPageCategory extends React.Component {
             const d = category[e];
             return (
               <li key={`category-nav-li-${i}`}>
-                <NavLink to={`/wink/${d.page}`} activeClassName="is-active">
+                <NavLink
+                  to={`/${data.page}/${d.page}`}
+                  activeClassName="is-active"
+                >
                   {d.title}
                 </NavLink>
               </li>

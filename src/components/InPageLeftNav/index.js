@@ -1,10 +1,7 @@
 import React from "react";
 import "./InPageLeftNav.scss";
 import { NavLink } from "react-router-dom";
-import {
-  listenToScrollEvent,
-  removeScrollEvent,
-} from "utils/listenToScrollEvent";
+import { listenToScrollEvent } from "utils/listenToScrollEvent";
 class InPageLeftNav extends React.Component {
   state = {
     fixed: false,
@@ -17,7 +14,7 @@ class InPageLeftNav extends React.Component {
   }
 
   render() {
-    const { contents, title } = this.props.data;
+    const { contents, page, title } = this.props.data;
     const { fixed } = this.state;
     return (
       <div className={fixed ? "nav-wrap fixed" : "nav-wrap"}>
@@ -27,7 +24,10 @@ class InPageLeftNav extends React.Component {
             {contents.map((e, i) => (
               <>
                 <li key={`left-nav-li-${i}`}>
-                  <NavLink to={`/wink/${e.page}`} activeClassName="is-active">
+                  <NavLink
+                    to={`/${page}/${e.page}`}
+                    activeClassName="is-active"
+                  >
                     {e.title}
                   </NavLink>
                 </li>
