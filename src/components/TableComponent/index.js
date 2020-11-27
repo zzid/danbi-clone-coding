@@ -11,7 +11,7 @@ const TableComponent = ({ tableDataObject }) => {
     <div className={"table-wrap"}>
       <h2 className={"hgroup"}>
         {title}
-        <Link to={`/${page}`} className={"table-btn"}>
+        <Link to={`/${page}`} className={"additional-btn"}>
           + 더보기
         </Link>
       </h2>

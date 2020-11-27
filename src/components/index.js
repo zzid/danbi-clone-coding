@@ -7,3 +7,4 @@ export { default as InPageCategory } from "./InPageCategory";
 export { default as ShowAllNavBar } from "./ShowAllNavBar";
 export { default as TableComponent } from "./TableComponent";
 export { default as ModalComponent } from "./ModalComponent";
+export { default as MainPageThirdContent } from "./MainPageThirdContent";

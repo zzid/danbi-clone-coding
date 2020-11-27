@@ -1,7 +1,11 @@
 import React from "react";
 import "./MainPage.scss";
 import { Link } from "react-router-dom";
-import { TableComponent, ModalComponent } from "components";
+import {
+  TableComponent,
+  ModalComponent,
+  MainPageThirdContent,
+} from "components";
 
 import videoHighlight from "data/videoData-highlight.json";
 import videoDataObject1 from "data/videoData1.json";
@@ -127,18 +131,7 @@ class MainPage extends React.Component {
             </div>
           </div>
         </div>
-        <div className={"bottom-area"}>
-          <div className={"section mainpage-contents-section-3"}>
-            <div className={"section-3-search left"}>
-              <h3 className={"hgroup"}>유아 교육 상식</h3>
-            </div>
-            <div className={"section-3-contents right"}>
-              <ul>
-                <li></li>
-              </ul>
-            </div>
-          </div>
-        </div>
+        <MainPageThirdContent />
         {curVideo && (
           <ModalComponent
             showModal={true}

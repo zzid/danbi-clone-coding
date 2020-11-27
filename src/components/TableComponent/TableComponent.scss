@@ -55,7 +55,7 @@
   color: #222;
   margin-bottom: 4px;
   padding-left: 15px;
-  > .table-btn {
+  > .additional-btn {
     color: #222;
     bottom: 0;
     height: 27px;
@@ -68,20 +68,4 @@
     position: absolute;
     right: 0;
   }
-}
-.table-btn {
-  overflow: hidden;
-  display: inline-block;
-  height: 40px;
-  min-width: 80px;
-  padding: 0 16px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  box-sizing: border-box;
-  vertical-align: middle;
-  text-align: center;
-  color: #212121;
-  font-size: 14px;
-  line-height: 42px;
-  cursor: pointer;
 }
