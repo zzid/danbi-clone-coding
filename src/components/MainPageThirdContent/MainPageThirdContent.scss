@@ -8,19 +8,8 @@
         margin-top: 0;
         border-radius: 0;
         padding: 14px 17px 7px;
-        fieldset {
+        form {
           overflow: hidden;
-          legend {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 0;
-            height: 0;
-            overflow: hidden;
-            visibility: hidden;
-            font-size: 0;
-            line-height: 0;
-          }
           input {
             height: 27px;
             font-size: 12px;
@@ -36,7 +25,7 @@
             color: #999;
             line-height: normal !important;
           }
-          button {
+          .submit-btn {
             height: 27px;
             line-height: 27px;
             padding: 0 23px;

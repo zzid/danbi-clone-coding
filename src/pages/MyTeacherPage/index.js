@@ -7,17 +7,10 @@ const data = NavBarData.NavBarData.myteacher;
 class MyTeacherPage extends React.Component {
   render() {
     const params = this.props.match.params.category;
-    console.log(data);
     return (
       <div className="page-container">
         <InPageLeftNav data={data} params={params} />
-        <div className="contents">
-          {/*<InPageCategory*/}
-          {/*  data={data}*/}
-          {/*  // category={this.category}*/}
-          {/*  params={params}*/}
-          {/*/>*/}
-        </div>
+        <div className="contents"></div>
       </div>
     );
   }

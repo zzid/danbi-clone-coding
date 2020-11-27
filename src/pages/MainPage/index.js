@@ -14,7 +14,6 @@ import tableDataObject1 from "data/tableData1.json";
 import tableDataObject2 from "data/tableData2.json";
 import VideoBox from "../../components/VideoBox";
 
-// const tableData1 = tableDataObject1.data;
 const videoData = Object.assign(
   {},
   videoHighlight,
@@ -46,7 +45,7 @@ class MainPage extends React.Component {
     } = event;
     this.setState({ curVideo: videoData[id] });
   };
-  onClickVideoCancel = () => {
+  onClickVideoModalCancel = () => {
     this.setState({ curVideo: null });
   };
   render() {
@@ -135,7 +134,7 @@ class MainPage extends React.Component {
         {curVideo && (
           <ModalComponent
             showModal={true}
-            onClickVideoCancel={this.onClickVideoCancel}
+            onClickVideoCancel={this.onClickVideoModalCancel}
             videoInfo={curVideo}
           />
         )}

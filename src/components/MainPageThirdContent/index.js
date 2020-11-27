@@ -2,6 +2,16 @@ import React from "react";
 import { Link } from "react-router-dom";
 import "./MainPageThirdContent.scss";
 const MainPageThirdContent = () => {
+  const onSubmit = (e) => {
+    e.preventDefault();
+    console.log(e.target.value);
+  };
+  const onChange = (e) => {
+    const {
+      target: { value },
+    } = e;
+    console.log(value);
+  };
   return (
     <div className={"bottom-area"}>
       <div className={"section mainpage-contents-section-3"}>
@@ -13,15 +23,15 @@ const MainPageThirdContent = () => {
             </Link>
           </h2>
           <div className="search-area">
-            <fieldset>
-              <legend>검색</legend>
+            <form onSubmit={onSubmit}>
               <input
                 type="text"
                 title="검색어 입력"
                 placeholder="서비스 관련한 궁금한 사항을 검색해 보세요."
+                onChange={onChange}
               />
-              <button className="btn-type3">검색</button>
-            </fieldset>
+              <input value="검색" type="submit" className="submit-btn" />
+            </form>
             <div className="keyword-box">
               <strong>추천검색어</strong>
               <ul>
