@@ -1,0 +1,43 @@
+.age-study-wrapper {
+  > .tab-nav {
+    ul {
+      height: 48px;
+      margin-bottom: 24px;
+      text-align: center;
+      line-height: 48px;
+
+      li {
+        width: 33.33%;
+        float: left;
+
+        a {
+          display: block;
+          border: 1px solid #e0e0e0;
+          border-bottom-left-radius: 1px;
+          border-left-width: 0;
+          background: #f7f7f7;
+          color: #666;
+          height: 46px;
+        }
+        &:first-child a {
+          border-top-left-radius: 8px;
+          border-bottom-left-radius: 8px;
+          border-left-width: 1px;
+        }
+        &:last-child a {
+          border-top-right-radius: 8px;
+          border-bottom-right-radius: 8px;
+        }
+
+        .is-active {
+          border-bottom-width: 0;
+          background: #fff;
+          color: #f03c78;
+          &:after {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+}

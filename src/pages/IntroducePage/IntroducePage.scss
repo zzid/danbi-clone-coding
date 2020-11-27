@@ -1,4 +1,4 @@
-@import "../../sass/colors.scss";
+@import "src/sass/colors.scss";
 
 .wink-div {
   position: relative;
@@ -13,7 +13,7 @@
     background: #f03c78;
     font-size: 23px;
     font-weight: bold;
-    color: #fff;
+    color: $white;
     padding: 9px 0;
     text-align: center;
     border-radius: 28px;

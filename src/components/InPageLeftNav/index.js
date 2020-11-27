@@ -31,14 +31,14 @@ class InPageLeftNav extends React.Component {
                     {e.title}
                   </NavLink>
                 </li>
+                {/* if there is additional contents, below the content */}
                 {e.contents && (
                   <ul className="additional-ul">
                     {e.contents.map((content, i) => (
                       <li className="additional-li" key={`additional-li-${i}`}>
                         <NavLink
-                          to="/"
-                          className="additional-navlink"
-                          activeClassName="additional-is-active"
+                          to={`/${page}/${e.page}/${content.page}`}
+                          activeClassName="is-active"
                         >
                           {content.title}
                         </NavLink>

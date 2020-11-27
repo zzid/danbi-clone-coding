@@ -6,29 +6,31 @@
       "contents": [
         {
           "title": "윙크 한눈에 보기",
-          "page": "lookview"
+          "page": "looklist"
         },
         {
           "title": "과목별 학습",
-          "page": "subjectko"
+          "page": "subjectlist"
         },
         {
           "title": "연령별 학습",
-          "page": "agestudyfoursix"
+          "page": "agestudylist"
         },
         {
           "title": "학부모님 사용 후기",
-          "page": "userpost"
+          "page": "userpostlist"
         },
         {
           "title": "학습, 체험 신청",
-          "page": "freestudy",
+          "page": "studylist",
           "contents": [
             {
-              "title": "무료 체험학습 신청"
+              "title": "무료 체험학습 신청",
+              "page": "freestudy"
             },
             {
-              "title": "유료 학습 신청"
+              "title": "유료 학습 신청",
+              "page": "paidstudy"
             }
           ]
         }

@@ -217,9 +217,9 @@ var의 경우 버그 발생과 메모리 누수의 위험 등이 있기 때문�
 
 ### TODO
 NavBar
-* hover 이후에 색변화 유지 안되는것
-* page 이동후 색변화 유지
-* resource 해제 하는거
+<del>* hover 이후에 색변화 유지 안되는것 </del>
+* page 이동후 색변화 유지 >> route
+* resource 해제 하는거 >> scroll event
 * navbar 제대로 안뜨는 부분
 * navbar 내의 + 버튼
 * How ref works?

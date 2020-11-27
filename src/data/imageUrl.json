@@ -76,11 +76,19 @@
       "img": "https://s.wink.co.kr/pc/images/wink/wink_age_03_0528.jpg"
     }
   },
-  "freestudylist": {
+  "studylist": {
     "freestudy": {
+      "title": "무료 체험 학습 신",
       "page": "freestudy",
-      "title": "?",
-      "img": "https://s.wink.co.kr/marketing/banner/pc/freeapply/event_freestudy_09.jpg"
+      "images": [
+        "https://s.wink.co.kr/marketing/banner/pc/freeapply/event_freestudy_09.jpg",
+        "https://s.wink.co.kr/pc/1.1.0/member/freestudy_section_01.jpg",
+        "https://s.wink.co.kr/pc/1.1.0/member/freestudy_section_02.jpg"
+      ]
+    },
+    "paidstudy": {
+      "title": "유료 학습 신청",
+      "page": "paidstudy"
     }
   }
 }

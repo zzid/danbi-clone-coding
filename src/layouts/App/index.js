@@ -20,9 +20,9 @@ class App extends React.Component {
           {/* wink */}
           <Route exact path="/" component={MainPage} />
           <Route path="/wink/:category" component={IntroducePage} />
-          <Route path="/wink/looklist/:category" component={IntroducePage} />
+          {/*<Route path="/wink/looklist/:category" component={IntroducePage} />*/}
           <Route exact path="/wink">
-            <Redirect to="/wink/lookview" />
+            <Redirect to="/wink/looklist/lookview" />
           </Route>
 
           <Route exact path="/wink/agestudy">

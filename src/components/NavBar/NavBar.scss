@@ -1,5 +1,5 @@
 @import "src/sass/colors.scss";
-@import "src/sass/nth-child-hover.scss";
+@import "../../sass/nth-child-bgimg.scss";
 .NavBar__container {
   z-index: 9999;
   background-color: $sky-blue;
@@ -20,7 +20,7 @@
       background-color: #676969;
       background-position: 50% 12px;
       background-repeat: no-repeat;
-      color: #fff;
+      color: $white;
       font-size: 12px;
       font-weight: bold;
       letter-spacing: -1px;
@@ -96,12 +96,12 @@
       position: absolute;
       width: 181px;
 
-      background: #fff;
+      background: $white;
       list-style-type: none;
       a {
-        background: #fff;
+        background: $white;
         text-align: left;
-        color: #666;
+        color: $dark-grey;
         font-size: 14px;
         font-weight: normal;
         line-height: 1.4;

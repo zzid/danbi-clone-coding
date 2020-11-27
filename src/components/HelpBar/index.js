@@ -29,7 +29,7 @@ class HelpBar extends React.Component {
         }
       >
         <div className="free-trial">
-          <Link to="/wink/freestudy">
+          <Link to="/wink/freestudylist/freestudy">
             <img src={winkBot} alt="img" />
             <p>
               <span>무료</span>

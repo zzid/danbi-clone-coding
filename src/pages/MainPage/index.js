@@ -93,7 +93,7 @@ class MainPage extends React.Component {
           </div>
         </div>
         <div className={"mainpage-contents"}>
-          <div className={"mainpage-contents-section-1"}>
+          <div className={"section mainpage-contents-section-1"}>
             <TableComponent tableDataObject={tableDataObject1} />
             <div className={"mainpage-contents-videos right"}>
               <h2 className={"hgroup"}>재미있고 유익한 윙크 콘텐츠</h2>
@@ -115,7 +115,7 @@ class MainPage extends React.Component {
               </div>
             </div>
           </div>
-          <div className={"mainpage-contents-section-2"}>
+          <div className={"section mainpage-contents-section-2"}>
             <TableComponent tableDataObject={tableDataObject2} />
             <div className={"mainpage-contents-videos right"}>
               <h2 className={"hgroup"}>윙크를 말한다</h2>
@@ -124,6 +124,18 @@ class MainPage extends React.Component {
                 videoObject={videoDataObject2}
                 onClickVideoContent={this.onClickVideoContent}
               />
+            </div>
+          </div>
+        </div>
+        <div className={"bottom-area"}>
+          <div className={"section mainpage-contents-section-3"}>
+            <div className={"section-3-search left"}>
+              <h3 className={"hgroup"}>유아 교육 상식</h3>
+            </div>
+            <div className={"section-3-contents right"}>
+              <ul>
+                <li></li>
+              </ul>
             </div>
           </div>
         </div>

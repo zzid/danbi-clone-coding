@@ -52,19 +52,20 @@
     padding-left: 16px;
     margin-top: 10px;
 
-    .additional-navlink {
+    > a {
       padding-left: 14px;
       background: url(https://s.wink.co.kr/pc/images/bu_dot.png) 0 9px no-repeat;
-      color: #999 !important;
+      color: #999;
       font-size: 16px;
       line-height: 1.6;
       display: block;
       &:hover {
-        color: #666 !important;
+        color: $dark-grey;
       }
     }
-    .additional-is-active {
-      color: #666;
+
+    .is-active {
+      color: $dark-grey;
     }
   }
 }

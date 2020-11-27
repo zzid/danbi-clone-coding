@@ -1,0 +1,31 @@
+.btn-area {
+  width: 100%;
+  margin: 0;
+  background-color: #f8f6f3;
+  text-align: center;
+  .btn-freestudy {
+    font-size: 40px;
+    font-weight: bold;
+    border-radius: 40px;
+    background-color: #3656a9;
+    color: white;
+    width: 480px;
+    height: 80px;
+    line-height: 2.1;
+    display: inline-block;
+    box-shadow: 0 3px 1px grey;
+    &:after {
+      background: url(https://s.wink.co.kr/pc/images/info/bg_arrow_circle_right.jpg)
+        no-repeat;
+      background-size: contain;
+      display: inline-block;
+      content: "";
+      width: 36px;
+      height: 36px;
+      vertical-align: middle;
+      margin-left: 12px;
+      margin-bottom: 7px;
+      border-radius: 50%;
+    }
+  }
+}
