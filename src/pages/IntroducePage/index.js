@@ -8,7 +8,7 @@ import UrlData from "data/imageUrl.json";
 const data = NavBarData.NavBarData.wink;
 const pageData = Object.assign(
   {},
-  Object.keys(UrlData).map((key) => UrlData[key])
+  ...Object.keys(UrlData).map((key) => UrlData[key])
 );
 class IntroducePage extends React.Component {
   // state = {
@@ -28,7 +28,10 @@ class IntroducePage extends React.Component {
   // }
   render() {
     const params = this.props.match.params.category;
-    this.category = UrlData[``];
+    console.log(UrlData);
+    // console.log(params);
+    // console.log(pageData[params]);
+    // this.category = pageData[params];
     // const { curCategory } = this.state;
     if (params.match(/subject/g)) {
       this.category = UrlData.subjectlist;
@@ -38,13 +41,10 @@ class IntroducePage extends React.Component {
       this.category = UrlData.agestudylist;
     } else if (params.match(/freestudy/g)) {
       this.category = UrlData.freestudylist;
+    } else if (params.match(/userpost/g)) {
+      this.category = UrlData.userpostlist;
     }
     console.log(this.category);
-    console.log("pageData :", pageData);
-    console.log(
-      "next : ",
-      Object.keys(UrlData).map((key) => UrlData[key])
-    );
     return (
       <div className="page-container">
         <InPageLeftNav data={data} params={params} />

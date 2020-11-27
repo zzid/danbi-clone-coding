@@ -1,5 +1,10 @@
 {
   "title": "윙크 소식 & 교육 정보",
+  "page": "info/edulist",
+  "columns": {
+    "no": "No",
+    "title": "제목"
+  },
   "data": [
     {
       "no": "추천",

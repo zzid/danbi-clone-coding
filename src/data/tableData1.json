@@ -1,5 +1,13 @@
 {
   "title": "학부모님 사용후기",
+  "page": "wink/userpost",
+  "columns": {
+    "no": "No",
+    "title": "제목",
+    "author": "작성자",
+    "date": "작성일",
+    "click": "조회수"
+  },
   "data": [
     {
       "key": "1",

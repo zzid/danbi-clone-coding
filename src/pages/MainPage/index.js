@@ -118,7 +118,7 @@ class MainPage extends React.Component {
           <div className={"mainpage-contents-section-2"}>
             <TableComponent tableDataObject={tableDataObject2} />
             <div className={"mainpage-contents-videos right"}>
-              <h2 className={"hgroup"}>윙크를 말한다.</h2>
+              <h2 className={"hgroup"}>윙크를 말한다</h2>
               <VideoBox
                 classNameProp={"second"}
                 videoObject={videoDataObject2}
