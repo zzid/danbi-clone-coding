@@ -1,9 +1,5 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import {
-  listenToScrollEvent,
-  removeScrollEvent,
-} from "utils/listenToScrollEvent";
 import winkBot from "data/ico_free_study.png";
 import "./HelpBar.scss";
 
@@ -11,21 +7,19 @@ class HelpBar extends React.Component {
   state = {
     fixed: false,
   };
+  componentDidMount() {
+    this.props.listenToScrollEvent(this.onSetFixed);
+  }
   onSetFixed = (flag) => {
     this.setState({ fixed: flag });
   };
-  componentDidMount() {
-    this.scrollRequest = listenToScrollEvent(this.onSetFixed);
-  }
-  componentWillUnmount() {
-    removeScrollEvent(this.scrollRequest);
-  }
+
   render() {
     const { fixed } = this.state;
     return (
       <div
         className={
-          fixed ? "HelpBar__container Header__fixed" : "HelpBar__container"
+          fixed ? "help-bar-container header-fixed" : "help-bar-container"
         }
       >
         <div className="free-trial">
@@ -55,7 +49,7 @@ class HelpBar extends React.Component {
             </a>
           </li>
         </ul>
-        <div className="HelpBar__cs-area">
+        <div className="help-bar-cs-area">
           <p className="title">윙크 학부모님 공감센터</p>
           <p className="sub-title">
             학부모님 말씀을 경청하며 최선을 다해 도와드리겠습니다.

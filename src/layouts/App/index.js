@@ -12,10 +12,22 @@ import {
 import "./App.scss";
 
 class App extends React.Component {
+  listenToScrollEvent = (onSetFixed) => {
+    document.addEventListener("scroll", () => {
+      return requestAnimationFrame(() => {
+        if (window.pageYOffset > 80) {
+          onSetFixed(true);
+        } else if (window.pageYOffset < 50) {
+          onSetFixed(false);
+        }
+      });
+    });
+  };
+
   render() {
     return (
       <div className="App">
-        <Header />
+        <Header listenToScrollEvent={this.listenToScrollEvent} />
         <Switch>
           {/* wink */}
           <Route exact path="/" component={MainPage} />
@@ -50,7 +62,7 @@ class App extends React.Component {
           </Route>
           <Route path="/customer/:category" component={CustomerPage} />
         </Switch>
-        <HelpBar />
+        <HelpBar listenToScrollEvent={this.listenToScrollEvent} />
         <Footer />
       </div>
     );

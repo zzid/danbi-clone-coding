@@ -1,6 +1,6 @@
 @import "src/sass/colors.scss";
 @import "../../sass/nth-child-bgimg.scss";
-.NavBar__container {
+.navbar-container {
   z-index: 9999;
   background-color: $sky-blue;
   position: relative;
@@ -35,10 +35,10 @@
   }
 }
 
-.NavBar__ul {
+.navbar-ul {
   width: 960px;
   margin: 0 auto;
-  .NavList__list {
+  .navlist-list {
     width: 181px;
     float: left;
     position: relative;
@@ -72,7 +72,7 @@
       }
     }
 
-    &:hover .NavList__contents {
+    &:hover .navlist-contents {
       /* animation */
       max-height: 1000px;
       transition: max-height 0.8s ease-in;
@@ -86,7 +86,7 @@
         visibility: visible;
       }
     }
-    .NavList__contents {
+    .navlist-contents {
       /* animation */
       max-height: 0;
       transition: max-height 0.8s ease-out;
@@ -131,7 +131,7 @@
   }
 }
 
-.NavBar__fixed {
+.navbar-fixed {
   width: 100%;
   position: fixed;
   top: 0;

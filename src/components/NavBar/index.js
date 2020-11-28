@@ -1,24 +1,20 @@
 import React from "react";
 import { NavLink, Link } from "react-router-dom";
-import {
-  listenToScrollEvent,
-  removeScrollEvent,
-} from "utils/listenToScrollEvent";
 import { ShowAllNavBar } from "components";
 import "./NavBar.scss";
 import NavBarData from "data/data.json";
 const data = NavBarData.NavBarData;
 const NavList = (props) => {
   return (
-    <li className="NavList__list">
+    <li className="navlist-list">
       <NavLink to={`/${props.oneData.page}`} activeClassName="is-active">
         {props.oneData.title}
       </NavLink>
-      <ul className="NavList__contents">
+      <ul className="navlist-contents">
         {props.oneData.contents.map((d, i) => (
           <Link
-            className={`NavList__content-item-${i + 1}`}
-            key={`navlist-content-item-${i}`}
+            className={`navlist-content-item-${i + 1}`}
+            key={`nav-content-item-${i}`}
             to={`/${props.oneData.page}/${d.page}`}
           >
             {d.title}
@@ -33,20 +29,12 @@ class NavBar extends React.Component {
     fixed: false,
     isShowAll: false,
   };
+  componentDidMount() {
+    this.props.listenToScrollEvent(this.onSetFixed);
+  }
   onSetFixed = (flag) => {
     this.setState({ fixed: flag });
   };
-  componentDidMount() {
-    this.scrollRequest = listenToScrollEvent(this.onSetFixed);
-    console.log(this.scrollRequest);
-    // this.listenToScrollEvent();
-  }
-
-  componentDidUpdate(prevProps, prevState, snapshot) {}
-
-  componentWillUnmount() {
-    removeScrollEvent(this.scrollRequest);
-  }
 
   handleShowAllClick = () => {
     this.setState((prevState) => ({
@@ -57,11 +45,9 @@ class NavBar extends React.Component {
     const { fixed, isShowAll } = this.state;
     return (
       <nav
-        className={
-          fixed ? "NavBar__container NavBar__fixed" : "NavBar__container"
-        }
+        className={fixed ? "navbar-container navbar-fixed" : "navbar-container"}
       >
-        <ul className={isShowAll ? "NavBar__ul hide-this" : "NavBar__ul"}>
+        <ul className={isShowAll ? "navbar-ul hide-this" : "navbar-ul"}>
           {Object.keys(data).map((d, i) => (
             <NavList oneData={data[d]} key={`top-nav-li-${i}`} />
           ))}

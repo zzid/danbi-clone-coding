@@ -3,10 +3,10 @@ import { NavBar } from "components";
 import logoDesc from "data/logo_desc.png";
 import "./Header.scss";
 
-const Header = () => {
+const Header = ({ listenToScrollEvent }) => {
   return (
-    <div className="Header__container">
-      <div className="Header__header">
+    <div className="header-container">
+      <div className="header-top">
         <h1>
           <a href="/">
             <img src="https://s.wink.co.kr/pc/images/logo.png" alt="logo" />
@@ -15,7 +15,7 @@ const Header = () => {
         <p>
           <img src={logoDesc} alt="logo-desc" />
         </p>
-        <div className="Header__header-util">
+        <div className="header-top-util">
           <a href="#" className="join">
             회원가입
           </a>
@@ -25,7 +25,7 @@ const Header = () => {
           </ul>
         </div>
       </div>
-      <NavBar />
+      <NavBar listenToScrollEvent={listenToScrollEvent} />
     </div>
   );
 };
