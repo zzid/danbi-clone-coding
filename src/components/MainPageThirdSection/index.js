@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import "./MainPageThirdContent.scss";
+import "./MainPageThirdSection.scss";
 const MainPageThirdContent = () => {
   const onSubmit = (e) => {
     e.preventDefault();
