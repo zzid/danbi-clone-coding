@@ -125,6 +125,17 @@ componentDidMount() 내에서 생성된 구독 해제 등 필요한 모든 정�
 </pre>
 
 ## JS Study
+- Class
+- Prototype
+- Property
+- Promise
+- Callback
+- Async, Await
+- Event, Bubbling, Capture
+- Redux
+- Map, Filter, Reduce
+- This, Bind, …
+- var, let, const, 호이스팅
 
 ### This
 
@@ -213,6 +224,10 @@ var의 경우 버그 발생과 메모리 누수의 위험 등이 있기 때문�
 </pre>
 
 #### Property
+
+
+#### Async & Await
+>
 ---------
 
 ### TODO
@@ -223,3 +238,5 @@ NavBar
 * navbar 제대로 안뜨는 부분
 * navbar 내의 + 버튼
 * How ref works?
+
+

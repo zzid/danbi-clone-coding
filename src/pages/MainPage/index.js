@@ -12,10 +12,7 @@ class MainPage extends React.Component {
     return (
       <div className="mainpage-container">
         <MainPageFirstSection />
-        <MainPageSecondSection
-          onClickVideoContent={this.onClickVideoContent}
-          onClickVideoModalCancel={this.onClickVideoModalCancel}
-        />
+        <MainPageSecondSection />
         <MainPageThirdSection />
       </div>
     );
