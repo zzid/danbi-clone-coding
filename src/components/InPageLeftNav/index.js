@@ -49,6 +49,23 @@ class InPageLeftNav extends React.Component {
                     ))}
                   </ul>
                 )}
+                {/* this below is for customer page*/}
+                {e.text && (
+                  <div className={"text-in-category"}>
+                    <span className={"title"}>{e.text.title}</span>
+                    <br />
+                    <span className={"phone-number"}>{e.text.phoneNumber}</span>
+                    <span className={"sub-title"}>
+                      {e.text.weekdays}{" "}
+                      <span className={"time"}>{e.text.weekdaysTime}</span>
+                    </span>
+                    <br />
+                    <span className={"sub-title"}>
+                      {e.text.weekend}{" "}
+                      <span className={"time"}>{e.text.weekendTime}</span>
+                    </span>
+                  </div>
+                )}
               </>
             ))}
           </ul>

@@ -8,7 +8,7 @@ const FreeStudyListPage = (props) => {
   const params = props.match.params.category;
   return (
     <>
-      <h3>무료 체험 학습 신청</h3>
+      <h3>{data[params].title}</h3>
       <div className="wink-div">
         {data[params].images && (
           <>

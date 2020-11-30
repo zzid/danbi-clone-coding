@@ -1,5 +1,6 @@
 import React from "react";
 import NavBarData from "data/data.json";
+import mykidsData from "data/mykidsPageData.json";
 import { InPageLeftNav } from "components";
 import { Link } from "react-router-dom";
 import "./MyKidsPage.scss";
@@ -20,8 +21,7 @@ class MyKidsPage extends React.Component {
               <span className="dot">플</span> 화면입니다.
             </strong>
             <p>
-              유료회원 가입 후 한 달 뒤 부터 아래와 같은 월간 레포트가
-              제공됩니다.
+              {mykidsData[params]?.text}
               <br />
               <br />
               윙크 학습을 직접 체험해 보시려면

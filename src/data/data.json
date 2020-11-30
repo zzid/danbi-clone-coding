@@ -146,13 +146,14 @@
         {
           "title": "선생님 모집",
           "page": "teacher",
-          "contents": [
-            {
-              "title": "학부모님 공감센터",
-              "phone": "1522-1244",
-              "openingHour": "월-금요일 10:00~20:00"
-            }
-          ]
+          "text": {
+            "title": "학부모님 공감센터",
+            "phoneNumber": "1522-1244",
+            "weekdays": "월-금요일",
+            "weekdaysTime": "10:00~20:00",
+            "weekend": "토요일",
+            "weekendTime": "준비중입니다."
+          }
         }
       ]
     }

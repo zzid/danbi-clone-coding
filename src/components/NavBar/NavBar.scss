@@ -38,97 +38,101 @@
 .navbar-ul {
   width: 960px;
   margin: 0 auto;
-  .navlist-list {
-    width: 181px;
-    float: left;
-    position: relative;
-
-    a {
-      position: relative;
-      display: block;
-      font-size: 18px;
-      color: white;
-      text-align: center;
-      line-height: 56px;
-
-      &:before {
-        top: -18px;
-        left: -13px;
-        width: 55px;
-        height: 74px;
-
-        content: "";
-        position: absolute;
-        visibility: hidden;
-      }
-    }
-
-    &:hover {
-      > a {
-        background-color: $blue;
-        &:before {
-          visibility: visible;
-        }
-      }
-    }
-
-    &:hover .navlist-contents {
-      /* animation */
-      max-height: 1000px;
-      transition: max-height 0.8s ease-in;
-      overflow: hidden;
-      /* animation end */
-    }
-
-    .is-active {
-      background-color: $blue;
-      &:before {
-        visibility: visible;
-      }
-    }
-    .navlist-contents {
-      /* animation */
-      max-height: 0;
-      transition: max-height 0.8s ease-out;
-      overflow: hidden;
-      /* animation end */
-
-      position: absolute;
-      width: 181px;
-
-      background: $white;
-      list-style-type: none;
-      a {
-        background: $white;
-        text-align: left;
-        color: $dark-grey;
-        font-size: 14px;
-        font-weight: normal;
-        line-height: 1.4;
-        border-left: 0.5px solid $sky-blue;
-        border-right: 0.5px solid $sky-blue;
-        padding: 10px 7px;
-        &:first-child {
-          border-top: 0.5px solid $sky-blue;
-        }
-        &:last-child {
-          border-bottom: 0.5px solid $sky-blue;
-        }
-        &:hover {
-          color: $sky-blue;
-        }
-      }
-    }
-
-    // character in top nav bar
-    @include nth-child-bgimg(1, "https://s.wink.co.kr/pc/images/img_gnb.png");
-    @for $i from 2 to 6 {
-      @include nth-child-bgimg(
-        #{$i},
-        "https://s.wink.co.kr/pc/images/img_gnb#{$i}.png"
-      );
-    }
-  }
+  //.navlist-list {
+  //  width: 181px;
+  //  float: left;
+  //  position: relative;
+  //
+  //  a {
+  //    position: relative;
+  //    display: block;
+  //    font-size: 18px;
+  //    color: white;
+  //    text-align: center;
+  //    line-height: 56px;
+  //
+  //    &:before {
+  //      top: -18px;
+  //      left: -13px;
+  //      width: 55px;
+  //      height: 74px;
+  //
+  //      content: "";
+  //      position: absolute;
+  //      visibility: hidden;
+  //    }
+  //  }
+  //
+  //  &:hover {
+  //    > a {
+  //      background-color: $blue;
+  //      &:before {
+  //        visibility: visible;
+  //      }
+  //    }
+  //  }
+  //
+  //  &:hover .navlist-contents {
+  //    /* animation */
+  //    max-height: 1000px;
+  //    transition: max-height 0.8s ease-in;
+  //    overflow: hidden;
+  //    /* animation end */
+  //  }
+  //
+  //  .is-active {
+  //    background-color: $blue;
+  //    &:before {
+  //      visibility: visible;
+  //    }
+  //  }
+  //  .navlist-contents {
+  //    /* animation */
+  //    max-height: 0;
+  //    transition: max-height 0.8s ease-out;
+  //    overflow: hidden;
+  //    /* animation end */
+  //
+  //    position: absolute;
+  //    width: 181px;
+  //
+  //    background: $white;
+  //    list-style-type: none;
+  //    li {
+  //      a {
+  //        background: $white;
+  //        text-align: left;
+  //        color: $dark-grey;
+  //        font-size: 14px;
+  //        font-weight: normal;
+  //        line-height: 1.4;
+  //        border-left: 0.5px solid $sky-blue;
+  //        border-right: 0.5px solid $sky-blue;
+  //        padding: 10px 7px;
+  //
+  //        &:hover {
+  //          color: $sky-blue;
+  //        }
+  //      }
+  //      &:first-child {
+  //        border-top: 0.5px solid $sky-blue;
+  //      }
+  //
+  //      &:last-child {
+  //        border-bottom: 0.5px solid $sky-blue;
+  //      }
+  //    }
+  //  }
+  //
+  //  // character in top nav bar
+  //  @include nth-child-bgimg(1, "https://s.wink.co.kr/pc/images/img_gnb.png");
+  //  @for $i from 2 to 6 {
+  //    @include nth-child-bgimg(
+  //      #{$i},
+  //      "https://s.wink.co.kr/pc/images/img_gnb#{$i}.png"
+  //    );
+  //  }
+  //}
 }
 
 .navbar-fixed {

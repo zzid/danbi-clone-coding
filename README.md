@@ -170,12 +170,6 @@ array.concat(elemetns);
     * call()
     > 인수 리스트 받는다. (e.g) a,b,c,d ...
 
-<pre>
-<code>
-
-</code>
-</pre>
-
     * bind()
     > return : 지정한 this 값 및 초기 인수를 사용하여 변경한 원본 함수의 복제본.
 
@@ -231,14 +225,16 @@ var의 경우 버그 발생과 메모리 누수의 위험 등이 있기 때문�
 - callback + promise 를 읽고 쓰기 쉽게 구현된 문법
 </pre>
 ---------
+### How ref works?
 
 ### TODO
-NavBar
-<del>* hover 이후에 색변화 유지 안되는것 </del>
-* page 이동후 색변화 유지 >> route
-* resource 해제 하는거 >> scroll event
-* navbar 제대로 안뜨는 부분
-* navbar 내의 + 버튼
-* How ref works?
+<pre>
+[V] hover 이후에 색변화 유지 안되는것
+[V] page 이동후 색변화 유지 >> route
+[V] navbar 제대로 안뜨는 부분
+[V] navbar 내의 + 버튼
+[ ] resource 해제 하는거 >> scroll event
+</pre>
+
 
 

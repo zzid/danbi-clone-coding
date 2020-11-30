@@ -1,29 +1,31 @@
 import React from "react";
+import { NavList } from "components";
 import { NavLink, Link } from "react-router-dom";
 import { ShowAllNavBar } from "components";
 import "./NavBar.scss";
 import NavBarData from "data/data.json";
 const data = NavBarData.NavBarData;
-const NavList = (props) => {
-  return (
-    <li className="navlist-list">
-      <NavLink to={`/${props.oneData.page}`} activeClassName="is-active">
-        {props.oneData.title}
-      </NavLink>
-      <ul className="navlist-contents">
-        {props.oneData.contents.map((d, i) => (
-          <Link
-            className={`navlist-content-item-${i + 1}`}
-            key={`nav-content-item-${i}`}
-            to={`/${props.oneData.page}/${d.page}`}
-          >
-            {d.title}
-          </Link>
-        ))}
-      </ul>
-    </li>
-  );
-};
+// const NavList = (props) => {
+//   return (
+//     <li className="navlist-list">
+//       <NavLink to={`/${props.oneData.page}`} activeClassName="is-active">
+//         {props.oneData.title}
+//       </NavLink>
+//       <ul className="navlist-contents">
+//         {props.oneData.contents.map((d, i) => (
+//           <li key={`nav-content-item-${i}`}>
+//             <Link
+//               className={`navlist-content-item-${i + 1}`}
+//               to={`/${props.oneData.page}/${d.page}`}
+//             >
+//               {d.title}
+//             </Link>
+//           </li>
+//         ))}
+//       </ul>
+//     </li>
+//   );
+// };
 class NavBar extends React.Component {
   state = {
     fixed: false,
@@ -49,7 +51,7 @@ class NavBar extends React.Component {
       >
         <ul className={isShowAll ? "navbar-ul hide-this" : "navbar-ul"}>
           {Object.keys(data).map((d, i) => (
-            <NavList oneData={data[d]} key={`top-nav-li-${i}`} />
+            <NavList oneData={data[d]} key={`navlist-${data[d].title}`} />
           ))}
         </ul>
         <div className="show-all">

@@ -1,0 +1,151 @@
+@import "src/sass/colors.scss";
+@import "src/sass/nth-child-bgimg.scss";
+
+.navlist-list {
+  width: 181px;
+  float: left;
+  position: relative;
+
+  a {
+    position: relative;
+    display: block;
+    font-size: 18px;
+    color: white;
+    text-align: center;
+    line-height: 56px;
+
+    &:before {
+      top: -18px;
+      left: -13px;
+      width: 55px;
+      height: 74px;
+
+      content: "";
+      position: absolute;
+      visibility: hidden;
+    }
+  }
+
+  &:hover {
+    > a {
+      background-color: $blue;
+      color: white;
+
+      &:before {
+        visibility: visible;
+      }
+    }
+  }
+
+  &:hover .navlist-contents {
+    /* animation */
+    max-height: 700px;
+    transition: max-height 0.5s ease-in;
+    overflow: hidden;
+    /* animation end */
+  }
+
+  .is-active {
+    background-color: $blue;
+    &:before {
+      visibility: visible;
+    }
+  }
+  .navlist-contents {
+    /* animation */
+    max-height: 0;
+    transition: max-height 0.5s ease-out;
+    overflow: hidden;
+    /* animation end */
+
+    position: absolute;
+    width: 181px;
+
+    background: $white;
+    list-style-type: none;
+    li {
+      position: relative;
+      a {
+        background: $white;
+        text-align: left;
+        color: $dark-grey;
+        font-size: 14px;
+        font-weight: normal;
+        line-height: 1.4;
+        border-left: 0.5px solid $sky-blue;
+        border-right: 0.5px solid $sky-blue;
+        padding: 10px 15px;
+
+        &:hover {
+          color: $sky-blue;
+        }
+      }
+
+      .sublist-btn {
+        position: absolute;
+        top: 12px;
+        left: 154px;
+        width: 13px;
+        height: 13px;
+        font-size: 0;
+        line-height: 0;
+        cursor: pointer;
+        z-index: 10000;
+      }
+      .open-btn {
+        background: url(https://s.wink.co.kr/pc/images/icon_open.png) 50% 50%
+          no-repeat;
+      }
+      .close-btn {
+        background: url(https://s.wink.co.kr/pc/images/icon_close.png) 50% 50%
+          no-repeat;
+      }
+
+      .sublist {
+        max-height: 0;
+        transition: max-height 0.5s ease-out;
+        overflow: hidden;
+        li {
+          padding-left: 25px;
+          background: url(https://s.wink.co.kr/pc/images/bu_dot2.png) 16px 13px
+            no-repeat;
+          border-right: 0.5px solid $sky-blue !important;
+          &:first-child {
+            border-top: none;
+          }
+          &:last-child {
+            border-bottom: none;
+          }
+          a {
+            line-height: 2;
+            border: none;
+            background: #f5f5f5;
+            padding: 5px;
+          }
+        }
+        border-left: 0.5px solid $sky-blue !important;
+        background: #f5f5f5 !important;
+      }
+      .sublist-open {
+        max-height: 200px;
+        transition: max-height 0.5s ease-in;
+        overflow: hidden;
+      }
+      &:first-child {
+        border-top: 0.5px solid $sky-blue;
+      }
+
+      &:last-child {
+        border-bottom: 0.5px solid $sky-blue;
+      }
+    }
+  }
+  // character in top nav bar
+  @include nth-child-bgimg(1, "https://s.wink.co.kr/pc/images/img_gnb.png");
+  @for $i from 2 to 6 {
+    @include nth-child-bgimg(
+      #{$i},
+      "https://s.wink.co.kr/pc/images/img_gnb#{$i}.png"
+    );
+  }
+}
