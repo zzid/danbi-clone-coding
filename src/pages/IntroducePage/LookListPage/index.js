@@ -1,5 +1,5 @@
 import React from "react";
-import UrlData from "data/imageUrl.json";
+import UrlData from "data/winkPageData.json";
 import { InPageCategory } from "components";
 
 const LookListPage = (props) => {

@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import UrlData from "data/imageUrl.json";
+import UrlData from "data/winkPageData.json";
 import "./FreeStudyListPage.scss";
 
 const FreeStudyListPage = (props) => {

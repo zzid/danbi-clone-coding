@@ -1,6 +1,6 @@
 import React from "react";
 import { InPageCategory } from "components";
-import UrlData from "data/imageUrl.json";
+import UrlData from "data/winkPageData.json";
 import "./AgeStudyListPage.scss";
 
 const AgeStudyListPage = (props) => {
