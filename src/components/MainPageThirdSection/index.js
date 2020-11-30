@@ -1,17 +1,8 @@
 import React from "react";
+import { SearchBar } from "components";
 import { Link } from "react-router-dom";
 import "./MainPageThirdSection.scss";
 const MainPageThirdContent = () => {
-  const onSubmit = (e) => {
-    e.preventDefault();
-    console.log(e.target.value);
-  };
-  const onChange = (e) => {
-    const {
-      target: { value },
-    } = e;
-    console.log(value);
-  };
   return (
     <div className={"bottom-area"}>
       <div className={"section mainpage-contents-section-3"}>
@@ -23,26 +14,20 @@ const MainPageThirdContent = () => {
             </Link>
           </h2>
           <div className="search-area">
-            <form onSubmit={onSubmit}>
-              <input
-                type="text"
-                title="검색어 입력"
-                placeholder="서비스 관련한 궁금한 사항을 검색해 보세요."
-                onChange={onChange}
-              />
-              <input value="검색" type="submit" className="submit-btn" />
-            </form>
+            <SearchBar
+              placeHolder={"서비스 관련한 궁금한 사항을 검색해 보세요."}
+            />
             <div className="keyword-box">
               <strong>추천검색어</strong>
               <ul>
                 <li>
-                  <a href="#">수학공부</a>
+                  <Link to={"/info/infomain"}>수학공부</Link>
                 </li>
                 <li>
-                  <a href="#">자녀교육</a>
+                  <Link to={"/info/infomain"}>자녀교육</Link>
                 </li>
                 <li>
-                  <a href="#">유아사춘기</a>
+                  <Link to={"/info/infomain"}>유아사춘기</Link>
                 </li>
               </ul>
             </div>
@@ -102,6 +87,7 @@ const MainPageThirdContent = () => {
                 className="btn-link guide"
                 href="https://s.wink.co.kr/marketing/guide/wink_guide.pdf"
                 target="_blank"
+                rel="noreferrer"
               >
                 윙크 학습기
                 <br />
@@ -111,6 +97,7 @@ const MainPageThirdContent = () => {
                 className="btn-link guide"
                 href="https://s.wink.co.kr/marketing/guide/wink_samsung_guide.pdf"
                 target="_blank"
+                rel="noreferrer"
               >
                 삼성 학습기
                 <br />
@@ -147,7 +134,12 @@ const MainPageThirdContent = () => {
                 학부모님의 의견을 반영한
               </p>
               <p className="title">윙크 탄생배경</p>
-              <Link className="btn-link">자세히 보기</Link>
+              <a
+                href="https://www.wink.co.kr/client/desktop/?pagename=company/history"
+                className="btn-link"
+              >
+                자세히 보기
+              </a>
             </li>
           </ul>
         </div>

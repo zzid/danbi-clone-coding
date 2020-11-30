@@ -33,7 +33,7 @@ class HelpBar extends React.Component {
         </div>
         <ul>
           <li className="help-li-request">
-            <a>윙크 유료 학습 신청</a>
+            <Link to={"/wink/studylist/paidstudy"}>윙크 유료 학습 신청</Link>
           </li>
           <li className="help-li-talk">
             <a href="https://customer.happytalk.io/public_v1/chat_v4/public_point?go=C&is_login=N&uid=&site_id=4000000177&category_id=64405&division_id=64406&usergb=W&title=%5B%ED%85%8C%EC%8A%A4%ED%8A%B8+%EC%83%81%EB%8B%B4%EC%B0%BD%5D">

@@ -6,6 +6,8 @@ import LookListPage from "./LookListPage";
 import SubjectListPage from "./SubjectListPage";
 import AgeStudyListPage from "./AgeStudyListPage";
 import FreeStudyListPage from "./FreeStudyListPage";
+import UserPostListPage from "./UserPostListPage";
+import UserPostDetailPage from "./UserPostDetailPage";
 import NavBarData from "data/data.json";
 
 class IntroducePage extends React.Component {
@@ -33,10 +35,8 @@ class IntroducePage extends React.Component {
             </Route>
 
             {/* userpostlist */}
-            <Route
-              path={"/wink/userpostlist/:category"}
-              // component={UserPostListPage}
-            />
+            <Route exact path={"/wink/userpost"} component={UserPostListPage} />
+            <Route path={"/wink/userpost/:id"} component={UserPostDetailPage} />
 
             {/* agestudylist */}
             <Route

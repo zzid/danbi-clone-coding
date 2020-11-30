@@ -14,12 +14,15 @@ const ShowAllNavBar = ({ classProp }) => {
       }
     >
       <div className={"upper"}>
-        {Object.keys(NavBarData).map((key) => (
-          <div className={"show-all-menu-list"}>
+        {Object.keys(NavBarData).map((key, index) => (
+          <div
+            className={"show-all-menu-list"}
+            key={`show-all-menu-list-upper-item-${index}`}
+          >
             <Link to={`/${NavBarData[key].page}`}>{NavBarData[key].title}</Link>
             <ul>
               {NavBarData[key].contents.map((content, i) => (
-                <li key={`show-all-nav-upper-content-${i}`}>
+                <li key={`show-all-nav-upper-${content.title}-${i}`}>
                   <Link to={`/${NavBarData[key].page}/${content.page}`}>
                     {content.title}
                   </Link>
@@ -30,14 +33,17 @@ const ShowAllNavBar = ({ classProp }) => {
         ))}
       </div>
       <div className={"downer"}>
-        {Object.keys(ShowAllAdditional).map((key) => (
-          <div className={"show-all-menu-list"}>
+        {Object.keys(ShowAllAdditional).map((key, index) => (
+          <div
+            className={"show-all-menu-list"}
+            key={`show-all-menu-list-downer-item-${index}`}
+          >
             <Link to={`/${ShowAllAdditional[key].page}`}>
               {ShowAllAdditional[key].title}
             </Link>
             <ul>
               {ShowAllAdditional[key].contents?.map((content, i) => (
-                <li key={`show-all-nav-downer-content-${i}`}>
+                <li key={`show-all-nav-downer-${content.title}-${i}`}>
                   <Link to={"#"}>{content.title}</Link>
                 </li>
               ))}

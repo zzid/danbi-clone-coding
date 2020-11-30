@@ -130,7 +130,7 @@ componentDidMount() 내에서 생성된 구독 해제 등 필요한 모든 정�
 - Property
 - Promise
 - Callback
-- Async, Await
+- async, await
 - Event, Bubbling, Capture
 - Redux
 - Map, Filter, Reduce
@@ -226,8 +226,10 @@ var의 경우 버그 발생과 메모리 누수의 위험 등이 있기 때문�
 #### Property
 
 
-#### Async & Await
->
+#### async & await
+<pre>
+- callback + promise 를 읽고 쓰기 쉽게 구현된 문법
+</pre>
 ---------
 
 ### TODO

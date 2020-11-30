@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import UrlData from "data/imageUrl.json";
 import "./FreeStudyListPage.scss";
 
@@ -14,7 +15,9 @@ const FreeStudyListPage = (props) => {
             <img src={data[params].images[0]} alt={`${params}`} />
             <img src={data[params].images[1]} alt={`${params}`} />
             <div className="btn-area">
-              <a className="btn-freestudy">무료학습 신청하기</a>
+              <Link to={"/wink/studylist/freestudy"} className="btn-freestudy">
+                무료학습 신청하기
+              </Link>
             </div>
             <img src={data[params].images[2]} alt={`${params}`} />
           </>

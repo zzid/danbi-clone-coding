@@ -53,11 +53,9 @@
       "img": "https://s.wink.co.kr/pc/1.1.0/wink_subject/subject_study_01.jpg"
     }
   },
-  "userpostlist": {
-    "userpost": {
-      "title": "학부모님 사용 후기",
-      "page": "userpost"
-    }
+  "userpost": {
+    "title": "학부모님 사용 후기",
+    "page": "userpost"
   },
   "agestudylist": {
     "agestudyfoursix": {
@@ -78,7 +76,7 @@
   },
   "studylist": {
     "freestudy": {
-      "title": "무료 체험 학습 신",
+      "title": "무료 체험 학습 신청",
       "page": "freestudy",
       "images": [
         "https://s.wink.co.kr/marketing/banner/pc/freeapply/event_freestudy_09.jpg",

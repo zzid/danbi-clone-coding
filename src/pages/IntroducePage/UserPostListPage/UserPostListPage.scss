@@ -1,0 +1,139 @@
+@import "src/sass/colors.scss";
+.board-table-container {
+  .ant-table-thead {
+    tr {
+      th {
+        border-top: 2px solid black;
+        background-color: white;
+        font-weight: bold;
+        color: black;
+        font-size: 15px;
+        text-align: center;
+        &:first-child {
+          width: 90px;
+        }
+        &:nth-child(3) {
+          width: 175px;
+        }
+        &:nth-child(4) {
+          width: 80px;
+        }
+        &:nth-child(5) {
+          width: 123px;
+        }
+      }
+    }
+  }
+  .ant-table-tbody {
+    tr {
+      td {
+        a {
+          text-decoration: none;
+          color: black;
+          font-size: 17px;
+        }
+        text-align: center;
+        &:nth-child(2) {
+          text-align: left;
+        }
+        .tag-notice {
+          background: #90a4ae;
+          color: #fff;
+          display: inline-block;
+          height: 28px;
+          padding: 0 12px;
+          border: 0px solid #e0e0e0;
+          border-radius: 14px;
+          box-sizing: border-box;
+          vertical-align: middle;
+          font-size: 14px;
+          line-height: 28px;
+        }
+      }
+    }
+  }
+  // .ant-table-pagination .ant-table-pagination-right {
+  .ant-pagination {
+    justify-content: center;
+    .ant-pagination-prev,
+    .ant-pagination-next {
+      button {
+        border: none;
+      }
+      span {
+        margin-top: 4px;
+        align-content: center;
+        font-size: 25px;
+      }
+    }
+    //ant-pagination-item-1 ant-pagination-item-active
+    .ant-pagination-item {
+      border-radius: 50%;
+    }
+    .ant-pagination-item-active {
+      border-color: #06a7d6;
+      color: #00a5d5;
+    }
+  }
+  .search-bar-container {
+    form {
+      display: flex;
+      justify-content: center;
+      .text-input {
+        float: none;
+        width: 344px;
+        margin: 0 5px;
+        height: 40px;
+        padding-left: 10px;
+        padding-right: 10px;
+        border: 1px solid #e0e0e0;
+        background: #fff;
+        border-radius: 4px;
+        box-sizing: border-box;
+        text-align: left;
+        color: #999;
+        font-size: 14px;
+        line-height: normal !important;
+      }
+
+      .submit-btn {
+        float: none;
+        height: 40px;
+        padding: 0 28px;
+        border-radius: 4px;
+        font-size: 14px;
+        line-height: 40px;
+        display: inline-block;
+        background: #00a5d5;
+        box-sizing: border-box;
+        vertical-align: middle;
+        text-align: center;
+        color: #fff;
+        max-width: none;
+      }
+    }
+  }
+  .apply-free-study-div {
+    text-align: center;
+    margin-top: 90px;
+    a {
+      padding: 9px 22px;
+      line-height: 22px;
+      height: 60px;
+
+      background: #f03c78;
+      color: $white !important;
+      font-size: 16px;
+      border-radius: 8px;
+      box-sizing: border-box;
+      vertical-align: middle;
+      overflow: hidden;
+      display: inline-block;
+      min-width: 100px;
+      border: none;
+      span {
+        color: #fce100;
+      }
+    }
+  }
+}

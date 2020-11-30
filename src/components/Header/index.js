@@ -1,5 +1,6 @@
 import React from "react";
 import { NavBar } from "components";
+import { Link } from "react-router-dom";
 import logoDesc from "data/logo_desc.png";
 import "./Header.scss";
 
@@ -8,17 +9,17 @@ const Header = ({ listenToScrollEvent }) => {
     <div className="header-container">
       <div className="header-top">
         <h1>
-          <a href="/">
+          <Link to={"/"}>
             <img src="https://s.wink.co.kr/pc/images/logo.png" alt="logo" />
-          </a>
+          </Link>
         </h1>
         <p>
           <img src={logoDesc} alt="logo-desc" />
         </p>
         <div className="header-top-util">
-          <a href="#" className="join">
+          <Link to={"/"} className="join">
             회원가입
-          </a>
+          </Link>
           <ul>
             <li>내정보</li>
             <li>로그인</li>

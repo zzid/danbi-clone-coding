@@ -1,7 +1,9 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import "antd/dist/antd.css";
+import { Carousel } from "antd";
 import "./MainPageFirstSection.scss";
-
+import slideImages from "data/slideImages.json";
 class MainPageFirstSection extends React.Component {
   constructor(props) {
     super(props);
@@ -46,10 +48,11 @@ class MainPageFirstSection extends React.Component {
         <div className="mainpage-slider">
           <div>
             <a href="http://blog.wink.co.kr/221380729500" target="_self">
-              <img
-                src="https://s.wink.co.kr/production/u/4/2019/01/22/bDF00F04A6CB28B79263A643DCAAF0E05.%EC%83%89%EC%B9%A0%EA%B3%B5%EB%B6%80.jpg"
-                alt=""
-              />
+              <Carousel autoplay dots={false}>
+                {slideImages.images.map((image, index) => (
+                  <img src={image} alt={""} key={`slide-image-${index}`} />
+                ))}
+              </Carousel>
             </a>
           </div>
         </div>

@@ -1,7 +1,6 @@
 import React from "react";
 import NavBarData from "data/data.json";
-import UrlData from "data/imageUrl.json";
-import { InPageLeftNav, InPageCategory } from "components";
+import { InPageLeftNav } from "components";
 const data = NavBarData.NavBarData.myteacher;
 
 class MyTeacherPage extends React.Component {
