@@ -38,10 +38,8 @@ class App extends React.Component {
           </Route>
 
           {/* my kids */}
-          <Route exact path="/mykids">
-            <Redirect to="/mykids/total" />
-          </Route>
-          <Route path="/mykids/:category" component={MyKidsPage} />
+          <Route path="/mykids" component={MyKidsPage} />
+
           {/* my teacher */}
           <Route exact path="/myteacher">
             <Redirect to="/myteacher/myteacherkorean" />

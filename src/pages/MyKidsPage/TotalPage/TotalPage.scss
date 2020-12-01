@@ -1,0 +1,86 @@
+@import "src/sass/colors.scss";
+.sample-box {
+  box-sizing: border-box;
+  margin-bottom: 30px;
+  padding: 38px 0 45px;
+  border: 3px solid #c1e7e6;
+  border-radius: 6px;
+  text-align: center;
+  background: url(https://s.wink.co.kr/pc/images/mykids/bg_%20jumbotron01.jpg)
+    no-repeat 0 0/100% 100%;
+  .title {
+    font-size: 24px;
+    font-weight: bold;
+    color: #212121;
+    .dot {
+      position: relative;
+      color: #08bbd5;
+
+      &:after {
+        content: "";
+        position: absolute;
+        left: 50%;
+        top: -8px;
+        width: 4px;
+        height: 4px;
+        margin-left: -2px;
+        border-radius: 100%;
+        background-color: #ff9854;
+      }
+    }
+  }
+  .btn-wrapper {
+    text-align: center;
+    .study-btn {
+      width: 197px;
+      background: #f03c78;
+      color: $white !important;
+      font-size: 16px;
+      line-height: 50px;
+      border-radius: 8px;
+      box-sizing: border-box;
+      vertical-align: middle;
+      overflow: hidden;
+      display: inline-block;
+      height: 48px;
+      min-width: 100px;
+      padding: 0 24px;
+      border: none;
+      &:before {
+        width: 19px;
+        height: 18px;
+        margin-right: 7px;
+        background: url(https://s.wink.co.kr/pc/images/mykids/icon_btn_study.png)
+          no-repeat 0 0;
+        content: "";
+        display: inline-block;
+        vertical-align: middle;
+      }
+    }
+  }
+}
+.ant-modal-content {
+  text-align: center;
+  width: 480px;
+  margin-left: 100px;
+  top: 350px;
+  .access-control-modal-container {
+    .text {
+      font-size: 20px;
+      text-align: center;
+    }
+    .btn {
+      background: #95989f;
+      color: white;
+      cursor: pointer;
+      width: 100px;
+      border: none;
+      border-radius: 10px;
+      height: 48px;
+      padding: 0 24px;
+      vertical-align: middle;
+      text-align: center;
+      font-size: 16px;
+    }
+  }
+}

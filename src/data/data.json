@@ -65,10 +65,12 @@
           "page": "learning",
           "contents": [
             {
-              "title": "콘텐츠 자동 재생 설정"
+              "title": "콘텐츠 자동 재생 설정",
+              "page": "setautoplay"
             },
             {
-              "title": "학습 이용 시간 제한"
+              "title": "학습 이용 시간 제한",
+              "page": "settime"
             }
           ]
         }
