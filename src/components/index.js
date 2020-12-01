@@ -13,3 +13,5 @@ export { default as ModalComponent } from "./ModalComponent";
 export { default as MainPageFirstSection } from "./MainPageFirstSection";
 export { default as MainPageSecondSection } from "./MainPageSecondSection";
 export { default as MainPageThirdSection } from "./MainPageThirdSection";
+export { default as YearMonthPicker } from "./YearMonthPicker";
+export { default as SampleBox } from "./SampleBox";

@@ -236,5 +236,16 @@ var의 경우 버그 발생과 메모리 누수의 위험 등이 있기 때문�
 [ ] resource 해제 하는거 >> scroll event
 </pre>
 
+### CSS
+- display : inline && block && inline-block
+> inline : span 과 같은 성질, content/text 크기만큼만 차지하고 동일라인에 붙는다.
+>> width, height, margin/padding-top/bottom, line-height 적용 불가
 
+> block : 무조건 한줄 점유
 
+> inline-block : 한줄에 여러 태그 가능
+>> 위의 inline에서 적용불가 했던 것들이 inline-block 에서는 가능 
+
+- content 
+> 주로 :after :before 에서 사용
+>> html에 쓰지 않고, css로 내용을 생성하기 위해서 사용 (e.g string, counter 등)

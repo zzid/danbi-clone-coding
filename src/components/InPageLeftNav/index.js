@@ -31,7 +31,7 @@ class InPageLeftNav extends React.Component {
                     {e.title}
                   </NavLink>
                 </li>
-                {/* if there is additional contents, below the content*/}
+                {/* if there is additional contents */}
                 {e.contents && (
                   <ul className="additional-ul">
                     {e.contents.map((content) => (

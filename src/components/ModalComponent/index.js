@@ -9,6 +9,7 @@ const ModalComponent = ({ videoInfo, showModal, onClickVideoCancel }) => {
       <Modal
         visible={showModal}
         onCancel={onClickVideoCancel}
+        zIndex={11111}
         centered
         maskClosable={false}
         footer={null}

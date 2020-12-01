@@ -1,0 +1,30 @@
+@import "src/sass/colors.scss";
+.companypage-container {
+  h3 {
+    margin: 30px;
+  }
+  .title {
+    height: 100px;
+    background-color: $sky-blue;
+    text-align: center;
+    h1 {
+      color: $white;
+      font-size: 35px;
+      line-height: 100px;
+    }
+  }
+
+  .company-history {
+    img {
+      margin: 50px 180px;
+    }
+  }
+  .company-value {
+    color: black;
+    padding: 50px 0 60px;
+    font-size: 23px;
+    > span {
+      font-weight: bold;
+    }
+  }
+}

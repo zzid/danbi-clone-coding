@@ -19,12 +19,12 @@ class NavList extends React.Component {
           {this.props.oneData.title}
         </NavLink>
         <ul className="navlist-contents">
-          {this.props.oneData.contents.map((d, i) => (
+          {this.props.oneData.contents.map((data, i) => (
             <li key={`nav-content-item-${i}`}>
-              <Link to={`/${this.props.oneData.page}/${d.page}`}>
-                {d.title}
+              <Link to={`/${this.props.oneData.page}/${data.page}`}>
+                {data.title}
               </Link>
-              {d.contents && (
+              {data.contents && (
                 <button
                   onClick={this.onOpenClick}
                   className={
@@ -34,12 +34,12 @@ class NavList extends React.Component {
                   +
                 </button>
               )}
-              {d.contents && (
+              {data.contents && (
                 <div className={isOpen ? "sublist sublist-open" : "sublist"}>
-                  {d.contents.map((subContent) => (
+                  {data.contents.map((subContent) => (
                     <li>
                       <Link
-                        to={`/${this.props.oneData.page}/${subContent.page}/${d.page}`}
+                        to={`/${this.props.oneData.page}/${subContent.page}/${data.page}`}
                       >
                         {subContent.title}
                       </Link>

@@ -8,6 +8,7 @@ import {
   MyTeacherPage,
   InfoPage,
   CustomerPage,
+  CompanyPage,
 } from "pages";
 import "./App.scss";
 
@@ -32,13 +33,8 @@ class App extends React.Component {
           {/* wink */}
           <Route exact path="/" component={MainPage} />
           <Route path="/wink/:category" component={IntroducePage} />
-          {/*<Route path="/wink/looklist/:category" component={IntroducePage} />*/}
           <Route exact path="/wink">
             <Redirect to="/wink/looklist/lookview" />
-          </Route>
-
-          <Route exact path="/wink/agestudy">
-            <Redirect to="/wink/agefoursix" />
           </Route>
 
           {/* my kids */}
@@ -61,6 +57,9 @@ class App extends React.Component {
             <Redirect to="/customer/noticelist" />
           </Route>
           <Route path="/customer/:category" component={CustomerPage} />
+
+          {/*  company page */}
+          <Route path="/company" component={CompanyPage} />
         </Switch>
         <HelpBar listenToScrollEvent={this.listenToScrollEvent} />
         <Footer />

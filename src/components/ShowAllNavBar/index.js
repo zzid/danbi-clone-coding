@@ -44,7 +44,7 @@ const ShowAllNavBar = ({ classProp }) => {
             <ul>
               {ShowAllAdditional[key].contents?.map((content, i) => (
                 <li key={`show-all-nav-downer-${content.title}-${i}`}>
-                  <Link to={"#"}>{content.title}</Link>
+                  <Link to={`/${content.page}`}>{content.title}</Link>
                 </li>
               ))}
             </ul>

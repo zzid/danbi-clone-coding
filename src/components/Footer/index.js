@@ -15,9 +15,7 @@ class Footer extends React.Component {
           <div className="footer-content">
             <ul className="footer-menu">
               <li>
-                <a href="https://www.wink.co.kr/client/desktop/?pagename=company">
-                  회사소개
-                </a>
+                <Link to={"/company"}>회사소개</Link>
               </li>
               <li>
                 <a
