@@ -30,14 +30,9 @@ class App extends React.Component {
       <div className="App">
         <Header listenToScrollEvent={this.listenToScrollEvent} />
         <Switch>
-          {/* wink */}
           <Route exact path="/" component={MainPage} />
-          <Route path="/wink/:category" component={IntroducePage} />
-          <Route exact path="/wink">
-            <Redirect to="/wink/looklist/lookview" />
-          </Route>
 
-          {/* my kids */}
+          <Route path="/wink/" component={IntroducePage} />
           <Route path="/mykids" component={MyKidsPage} />
 
           {/* my teacher */}

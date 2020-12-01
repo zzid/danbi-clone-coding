@@ -19,6 +19,10 @@ class IntroducePage extends React.Component {
         <InPageLeftNav data={data} params={params} />
         <div className="contents">
           <Switch>
+            <Route exact path="/wink">
+              <Redirect to="/wink/looklist/lookview" />
+            </Route>
+
             {/* looklist */}
             <Route path={"/wink/looklist/:category"} component={LookListPage} />
             <Route path={"/wink/looklist"}>
