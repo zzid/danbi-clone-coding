@@ -10,27 +10,88 @@
       float: left;
       margin-right: 40px;
     }
+
+    .footer-content {
+      float: right;
+      width: calc(100% - 145px);
+      padding-top: 3px;
+      .footer-menu {
+        margin-bottom: 24px;
+        li {
+          float: left;
+          a {
+            color: $white;
+          }
+          &:first-child {
+            &:before {
+              display: none;
+            }
+          }
+          &:before {
+            content: "";
+            display: inline-block;
+            width: 1px;
+            height: 15px;
+            margin: 0 15px;
+            background: rgba(255, 255, 255, 0.6);
+            vertical-align: middle;
+          }
+        }
+      }
+    }
+    .footer-info {
+      font-weight: lighter;
+      p {
+        float: left;
+        font-size: 14px;
+        line-height: 1.7;
+        color: $white;
+      }
+      .service-area {
+        float: right;
+        display: block;
+        .phone-number {
+          font-weight: bold;
+          color: #52692d;
+          display: inline-block;
+          padding: 2px 5px 0 5px;
+          background: #fff;
+          line-height: 26px;
+          border-radius: 5px;
+          font-size: 16px;
+          margin-bottom: 5px;
+        }
+        .small-text {
+          text-align: right;
+        }
+      }
+    }
+    .small-text {
+      display: block;
+      font-size: 13px;
+      color: #fff;
+    }
     &:after {
       clear: both;
       content: "";
       display: block;
     }
-  }
-  .character-1 {
-    top: -205px;
-    left: -55px;
-  }
-  .character-2 {
-    top: -188px;
-    left: 862px;
-  }
-  .img-cloud {
-    top: -282px;
-    left: -173px;
-  }
-  .img-balloon {
-    top: -412px;
-    left: 1153px;
+    .character-1 {
+      top: -205px;
+      left: -55px;
+    }
+    .character-2 {
+      top: -188px;
+      left: 862px;
+    }
+    .img-cloud {
+      top: -282px;
+      left: -173px;
+    }
+    .img-balloon {
+      top: -412px;
+      left: 1153px;
+    }
   }
 }
 .footer-img {
