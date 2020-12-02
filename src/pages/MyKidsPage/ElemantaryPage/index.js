@@ -34,7 +34,6 @@ class ElemantaryPage extends React.Component {
   };
 
   onCancelModal = (event) => {
-    event.preventDefault();
     this.setState({ needToSignIn: false, goRedirect: true });
   };
 

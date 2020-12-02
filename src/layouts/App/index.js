@@ -15,7 +15,7 @@ import "./App.scss";
 class App extends React.Component {
   listenToScrollEvent = (onSetFixed) => {
     document.addEventListener("scroll", () => {
-      return requestAnimationFrame(() => {
+      requestAnimationFrame(() => {
         if (window.pageYOffset > 80) {
           onSetFixed(true);
         } else if (window.pageYOffset < 50) {

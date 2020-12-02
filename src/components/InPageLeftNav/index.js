@@ -1,17 +1,37 @@
 import React from "react";
 import "./InPageLeftNav.scss";
 import { NavLink } from "react-router-dom";
-import { listenToScrollEvent } from "utils/listenToScrollEvent";
+// import { listenToScrollEvent } from "utils/listenToScrollEvent";
 class InPageLeftNav extends React.Component {
+  constructor(props) {
+    super(props);
+    this.handleScrollEvent = this.reqAnimationFrame.bind(this);
+  }
   state = {
     fixed: false,
   };
+
+  componentDidMount() {
+    document.addEventListener("scroll", this.handleScrollEvent);
+  }
+  componentWillUnmount() {
+    console.log("unmount : ", this.reqID);
+    document.removeEventListener("scroll", this.handleScrollEvent);
+    cancelAnimationFrame(this.reqID);
+  }
+  reqAnimationFrame() {
+    this.reqID = requestAnimationFrame(() => {
+      if (window.pageYOffset > 80) {
+        this.setState({ fixed: true });
+      } else if (window.pageYOffset < 50) {
+        this.setState({ fixed: false });
+      }
+    });
+  }
+
   onSetFixed = (flag) => {
     this.setState({ fixed: flag });
   };
-  componentDidMount() {
-    listenToScrollEvent(this.onSetFixed);
-  }
 
   render() {
     const { contents, page, title } = this.props.data;
