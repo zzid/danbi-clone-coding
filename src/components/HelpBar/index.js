@@ -1,6 +1,5 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import winkBot from "data/ico_free_study.png";
 import "./HelpBar.scss";
 
 class HelpBar extends React.Component {
@@ -24,7 +23,12 @@ class HelpBar extends React.Component {
       >
         <div className="free-trial">
           <Link to="/wink/freestudylist/freestudy">
-            <img src={winkBot} alt="img" />
+            <img
+              src={
+                "https://s.wink.co.kr/pc/1.1.0/common/floating/ico_free_study.png"
+              }
+              alt="img"
+            />
             <p>
               <span>무료</span>
               <span> 학습 혜택 받기</span>

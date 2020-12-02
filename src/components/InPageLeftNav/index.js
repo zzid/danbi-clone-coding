@@ -1,7 +1,7 @@
 import React from "react";
 import "./InPageLeftNav.scss";
 import { NavLink } from "react-router-dom";
-// import { listenToScrollEvent } from "utils/listenToScrollEvent";
+
 class InPageLeftNav extends React.Component {
   constructor(props) {
     super(props);

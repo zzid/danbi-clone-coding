@@ -1,7 +1,6 @@
 import React from "react";
 import { NavBar } from "components";
 import { Link } from "react-router-dom";
-import logoDesc from "data/logo_desc.png";
 import "./Header.scss";
 
 const Header = ({ listenToScrollEvent }) => {
@@ -14,7 +13,10 @@ const Header = ({ listenToScrollEvent }) => {
           </Link>
         </h1>
         <p>
-          <img src={logoDesc} alt="logo-desc" />
+          <img
+            src={"https://s.wink.co.kr/pc/images/logo_desc.png"}
+            alt="logo-desc"
+          />
         </p>
         <div className="header-top-util">
           <Link to={"/"} className="join">

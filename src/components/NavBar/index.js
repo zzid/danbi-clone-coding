@@ -1,6 +1,5 @@
 import React from "react";
 import { NavList } from "components";
-import { NavLink, Link } from "react-router-dom";
 import { ShowAllNavBar } from "components";
 import "./NavBar.scss";
 import NavBarData from "data/data.json";

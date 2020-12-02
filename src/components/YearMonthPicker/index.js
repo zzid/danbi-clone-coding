@@ -19,7 +19,7 @@ class YearMonthPicker extends React.Component {
     }
   };
   onClickNext = () => {
-    if (this.state.curMonth + 1 >= 12) {
+    if (this.state.curMonth + 1 > 12) {
       this.setState((prev) => ({
         curYear: prev.curYear + 1,
         curMonth: 1,

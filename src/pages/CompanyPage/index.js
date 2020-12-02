@@ -10,7 +10,7 @@ const CompanyPage = () => {
         </div>
         {render}
         <div className={"section"}>
-          <img src={url} />
+          <img src={url} alt={"img"} />
         </div>
       </div>
     );
@@ -20,7 +20,10 @@ const CompanyPage = () => {
     <div className={"companypage-container"}>
       <div className={"section company-introduce"}>
         <h3>회사 소개</h3>
-        <img src="https://s.wink.co.kr/pc/images/about/section_01.png" />
+        <img
+          src="https://s.wink.co.kr/pc/images/about/section_01.png"
+          alt={"img"}
+        />
       </div>
       <SectionDiv
         title={"단비교육 개요"}

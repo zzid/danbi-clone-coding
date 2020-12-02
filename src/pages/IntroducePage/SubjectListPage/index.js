@@ -14,14 +14,16 @@ const SubjectListPage = (props) => {
       />
       <div className="wink-div">
         <img src={data[params].img} alt={`${params}`} />
-        <div className={"next-btn-wrapper"}>
-          <Link
-            to={`/wink/subjectlist/${data[params].next.page}`}
-            className={"next-btn"}
-          >
-            {`윙크 ${data[params].next.title} 내용 보러가기`}
-          </Link>
-        </div>
+        {data?.param && (
+          <div className={"next-btn-wrapper"}>
+            <Link
+              to={`/wink/subjectlist/${data[params].next.page}`}
+              className={"next-btn"}
+            >
+              {`윙크 ${data?.params?.next.title} 내용 보러가기`}
+            </Link>
+          </div>
+        )}
       </div>
     </>
   );
