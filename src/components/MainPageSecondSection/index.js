@@ -20,19 +20,20 @@ class MainPageSecondSection extends React.Component {
     super(props);
     this.state = {
       curVideo: null,
+      showModal: false,
     };
   }
   onClickVideoContent = (event) => {
     const {
       target: { id },
     } = event;
-    this.setState({ curVideo: videoData[id] });
+    this.setState({ curVideo: videoData[id], showModal: true });
   };
   onClickVideoModalCancel = () => {
-    this.setState({ curVideo: null });
+    this.setState({ curVideo: null, showModal: false });
   };
   render() {
-    const { curVideo } = this.state;
+    const { curVideo, showModal } = this.state;
     return (
       <>
         <div className={"mainpage-second-content-container"}>
@@ -70,13 +71,11 @@ class MainPageSecondSection extends React.Component {
             </div>
           </div>
         </div>
-        {curVideo && (
-          <ModalComponent
-            showModal={true}
-            onClickVideoCancel={this.onClickVideoModalCancel}
-            videoInfo={curVideo}
-          />
-        )}
+        <ModalComponent
+          showModal={showModal}
+          onClickVideoCancel={this.onClickVideoModalCancel}
+          videoInfo={curVideo && curVideo}
+        />
       </>
     );
   }

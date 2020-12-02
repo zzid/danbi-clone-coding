@@ -34,19 +34,21 @@ class NavList extends React.Component {
                   +
                 </button>
               )}
-              {data.contents && (
-                <div className={isOpen ? "sublist sublist-open" : "sublist"}>
-                  {data.contents.map((subContent) => (
-                    <li>
-                      <Link
-                        to={`/${this.props.oneData.page}/${subContent.page}/${data.page}`}
-                      >
-                        {subContent.title}
-                      </Link>
-                    </li>
-                  ))}
-                </div>
-              )}
+              <ul>
+                {data.contents && (
+                  <div className={isOpen ? "sublist sublist-open" : "sublist"}>
+                    {data.contents.map((subContent) => (
+                      <li key={subContent.title}>
+                        <Link
+                          to={`/${this.props.oneData.page}/${subContent.page}/${data.page}`}
+                        >
+                          {subContent.title}
+                        </Link>
+                      </li>
+                    ))}
+                  </div>
+                )}
+              </ul>
             </li>
           ))}
         </ul>

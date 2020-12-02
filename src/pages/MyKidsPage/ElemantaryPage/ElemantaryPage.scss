@@ -1,0 +1,29 @@
+.elemantarypage-container {
+  .ant-modal-content {
+    text-align: center;
+    width: 480px;
+    margin-left: 100px;
+    top: 350px;
+
+    .access-control-modal-container {
+      .text {
+        font-size: 20px;
+        text-align: center;
+      }
+
+      .btn {
+        background: #95989f;
+        color: white;
+        cursor: pointer;
+        width: 100px;
+        border: none;
+        border-radius: 10px;
+        height: 48px;
+        padding: 0 24px;
+        vertical-align: middle;
+        text-align: center;
+        font-size: 16px;
+      }
+    }
+  }
+}
