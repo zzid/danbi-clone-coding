@@ -48,7 +48,7 @@
     }
   }
   .navlist-contents {
-    @include dropDownAnimation(700px, 0.8s, ease-out);
+    @include dropDownAnimation(0, 0.8s, ease-out);
 
     position: absolute;
     width: 181px;

@@ -43,7 +43,7 @@ class NavList extends React.Component {
                     {data.contents.map((subContent) => (
                       <li key={subContent.title}>
                         <Link
-                          to={`/${this.props.oneData.page}/${subContent.page}/${data.page}`}
+                          to={`/${this.props.oneData.page}/${data.page}/${subContent.page}`}
                           onClick={this.props.onLinkClick}
                         >
                           {subContent.title}

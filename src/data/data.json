@@ -99,19 +99,24 @@
           "page": "infomain",
           "contents": [
             {
-              "title": "교육"
+              "title": "교육",
+              "page": "education"
             },
             {
-              "title": "건강"
+              "title": "건강",
+              "page": "health"
             },
             {
-              "title": "정서/발달"
+              "title": "정서/발달",
+              "page": "development"
             },
             {
-              "title": "독서"
+              "title": "독서",
+              "page": "read"
             },
             {
-              "title": "유치원/취학준비"
+              "title": "유치원/취학준비",
+              "page": "kindergarten"
             }
           ]
         },
