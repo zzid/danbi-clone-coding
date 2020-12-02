@@ -1,6 +1,6 @@
 @import "src/sass/colors.scss";
 @import "src/sass/nth-child-bgimg.scss";
-
+@import "src/sass/nav-animation.scss";
 .navlist-list {
   width: 181px;
   float: left;
@@ -38,11 +38,7 @@
   }
 
   &:hover .navlist-contents {
-    /* animation */
-    max-height: 700px;
-    transition: max-height 0.5s ease-in;
-    overflow: hidden;
-    /* animation end */
+    @include dropDownAnimation(700px, 0.8s, ease-in);
   }
 
   .is-active {
@@ -52,11 +48,7 @@
     }
   }
   .navlist-contents {
-    /* animation */
-    max-height: 0;
-    transition: max-height 0.5s ease-out;
-    overflow: hidden;
-    /* animation end */
+    @include dropDownAnimation(700px, 0.8s, ease-out);
 
     position: absolute;
     width: 181px;
@@ -102,9 +94,7 @@
       }
 
       .sublist {
-        max-height: 0;
-        transition: max-height 0.5s ease-out;
-        overflow: hidden;
+        @include dropDownAnimation(0, 0.5s, ease-out);
         li {
           padding-left: 25px;
           background: url(https://s.wink.co.kr/pc/images/bu_dot2.png) 16px 13px
@@ -127,9 +117,7 @@
         background: #f5f5f5 !important;
       }
       .sublist-open {
-        max-height: 200px;
-        transition: max-height 0.5s ease-in;
-        overflow: hidden;
+        @include dropDownAnimation(200px, 0.5s, ease-in);
       }
       &:first-child {
         border-top: 0.5px solid $sky-blue;

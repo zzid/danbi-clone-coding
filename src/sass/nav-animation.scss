@@ -1,0 +1,5 @@
+@mixin dropDownAnimation($max-height, $second, $animation) {
+  max-height: $max-height;
+  transition: max-height $second $animation;
+  overflow: hidden;
+}

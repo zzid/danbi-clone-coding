@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import "./ShowAllNavBar.scss";
 const NavBarData = data.NavBarData;
 const ShowAllAdditional = data.ShowAllAdditional;
-const ShowAllNavBar = ({ classProp }) => {
+const ShowAllNavBar = ({ classProp, onLinkClick }) => {
   return (
     <div
       className={
@@ -19,11 +19,16 @@ const ShowAllNavBar = ({ classProp }) => {
             className={"show-all-menu-list"}
             key={`show-all-menu-list-upper-item-${index}`}
           >
-            <Link to={`/${NavBarData[key].page}`}>{NavBarData[key].title}</Link>
+            <Link to={`/${NavBarData[key].page}`} onClick={onLinkClick}>
+              {NavBarData[key].title}
+            </Link>
             <ul>
               {NavBarData[key].contents.map((content, i) => (
                 <li key={`show-all-nav-upper-${content.title}-${i}`}>
-                  <Link to={`/${NavBarData[key].page}/${content.page}`}>
+                  <Link
+                    to={`/${NavBarData[key].page}/${content.page}`}
+                    onClick={onLinkClick}
+                  >
                     {content.title}
                   </Link>
                 </li>
@@ -38,13 +43,15 @@ const ShowAllNavBar = ({ classProp }) => {
             className={"show-all-menu-list"}
             key={`show-all-menu-list-downer-item-${index}`}
           >
-            <Link to={`/${ShowAllAdditional[key].page}`}>
+            <Link to={`/${ShowAllAdditional[key].page}`} onClick={onLinkClick}>
               {ShowAllAdditional[key].title}
             </Link>
             <ul>
               {ShowAllAdditional[key].contents?.map((content, i) => (
                 <li key={`show-all-nav-downer-${content.title}-${i}`}>
-                  <Link to={`/${content.page}`}>{content.title}</Link>
+                  <Link to={`/${content.page}`} onClick={onLinkClick}>
+                    {content.title}
+                  </Link>
                 </li>
               ))}
             </ul>

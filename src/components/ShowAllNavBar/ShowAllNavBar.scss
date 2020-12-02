@@ -1,7 +1,7 @@
+@import "src/sass/nav-animation.scss";
+
 .show-all-nav-bar-container {
-  max-height: 1000px;
-  transition: max-height 0.5s ease-in;
-  overflow: hidden;
+  @include dropDownAnimation(1000px, 0.5s, ease-in);
   visibility: visible;
   position: absolute;
   top: 0;
@@ -73,8 +73,6 @@
   }
 }
 .show-all-hide {
+  @include dropDownAnimation(0, 0.5s, ease-out);
   border: none;
-  max-height: 0;
-  transition: max-height 0.5s ease-out;
-  overflow: hidden;
 }

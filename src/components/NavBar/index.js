@@ -5,27 +5,7 @@ import { ShowAllNavBar } from "components";
 import "./NavBar.scss";
 import NavBarData from "data/data.json";
 const data = NavBarData.NavBarData;
-// const NavList = (props) => {
-//   return (
-//     <li className="navlist-list">
-//       <NavLink to={`/${props.oneData.page}`} activeClassName="is-active">
-//         {props.oneData.title}
-//       </NavLink>
-//       <ul className="navlist-contents">
-//         {props.oneData.contents.map((d, i) => (
-//           <li key={`nav-content-item-${i}`}>
-//             <Link
-//               className={`navlist-content-item-${i + 1}`}
-//               to={`/${props.oneData.page}/${d.page}`}
-//             >
-//               {d.title}
-//             </Link>
-//           </li>
-//         ))}
-//       </ul>
-//     </li>
-//   );
-// };
+
 class NavBar extends React.Component {
   state = {
     fixed: false,
@@ -34,6 +14,9 @@ class NavBar extends React.Component {
   componentDidMount() {
     this.props.listenToScrollEvent(this.onSetFixed);
   }
+  onLinkClick = () => {
+    this.setState({ isShowAll: false });
+  };
   onSetFixed = (flag) => {
     this.setState({ fixed: flag });
   };
@@ -62,7 +45,7 @@ class NavBar extends React.Component {
             <p>전체메뉴</p>
           </button>
         </div>
-        <ShowAllNavBar classProp={isShowAll} />
+        <ShowAllNavBar classProp={isShowAll} onLinkClick={this.onLinkClick} />
       </nav>
     );
   }

@@ -21,7 +21,10 @@ class NavList extends React.Component {
         <ul className="navlist-contents">
           {this.props.oneData.contents.map((data, i) => (
             <li key={`nav-content-item-${i}`}>
-              <Link to={`/${this.props.oneData.page}/${data.page}`}>
+              <Link
+                to={`/${this.props.oneData.page}/${data.page}`}
+                onClick={this.props.onLinkClick}
+              >
                 {data.title}
               </Link>
               {data.contents && (
@@ -41,6 +44,7 @@ class NavList extends React.Component {
                       <li key={subContent.title}>
                         <Link
                           to={`/${this.props.oneData.page}/${subContent.page}/${data.page}`}
+                          onClick={this.props.onLinkClick}
                         >
                           {subContent.title}
                         </Link>
