@@ -10,6 +10,7 @@ class TeacherPage extends React.Component {
         <div className={"contents"}>
           <h3>{mykidsData.teacher.title}</h3>
           <SampleBox params={"teacher"} />
+          <YearMonthPicker />
         </div>
       </>
     );

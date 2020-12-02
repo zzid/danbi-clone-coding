@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import "./MainPageThirdSection.scss";
 const MainPageThirdContent = () => {
   return (
-    <div className={"bottom-area"}>
+    <div className={"mainpage-third-content-container"}>
       <div className={"section mainpage-contents-section-3"}>
         <div className={"section-3-search left"}>
           <h2 className={"hgroup"}>

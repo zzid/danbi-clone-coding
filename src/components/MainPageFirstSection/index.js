@@ -25,7 +25,7 @@ class MainPageFirstSection extends React.Component {
     const { onPlay } = this.state;
 
     return (
-      <div className="mainpage-first">
+      <div className="mainpage-first-content-container">
         <img
           src="https://s.wink.co.kr/pc/new_image/main/bg_main.jpg"
           alt="main"

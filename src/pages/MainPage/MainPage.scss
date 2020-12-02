@@ -7,24 +7,5 @@
   float: right;
   width: 401px;
 }
-div {
-  &:after {
-    content: "";
-    display: block;
-    clear: both;
-  }
-}
-h3 {
-  margin-bottom: 14px;
-  color: $sky-blue;
-  font-size: 32px;
-}
-.section {
-  position: relative;
-  width: 960px;
-  margin: 0 auto;
-  box-sizing: border-box;
-}
-
 .mainpage-container {
 }

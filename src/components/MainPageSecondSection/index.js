@@ -35,7 +35,7 @@ class MainPageSecondSection extends React.Component {
     const { curVideo } = this.state;
     return (
       <>
-        <div className={"mainpage-contents"}>
+        <div className={"mainpage-second-content-container"}>
           <div className={"section mainpage-contents-first"}>
             <TableComponent tableDataObject={tableDataObject1} />
             <div className={"mainpage-contents-videos right"}>

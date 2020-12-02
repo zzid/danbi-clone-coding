@@ -1,14 +1,15 @@
 import React from "react";
-
+import "./VideoBox.scss";
 const VideoBox = ({ classNameProp, videoObject, onClickVideoContent }) => {
   return (
     <>
-      <ul
-        className={`video-box-container video-box-container-${classNameProp}`}
-      >
+      <ul className={`video-box-container`}>
         {Object.keys(videoObject.videos).map((key, i) => {
           return (
-            <li className={"video-box"} key={`videobox-${classNameProp}-${i}`}>
+            <li
+              className={`video-box ${classNameProp}`}
+              key={`videobox-${classNameProp}-${i}`}
+            >
               <div
                 id={videoObject.videos[key].value}
                 onClick={onClickVideoContent}
